@@ -1,33 +1,30 @@
 .footer{
     background-color: $primary-color;
     color: $white;
-    font-family: 'Poppins', sans-serif;
+    font-family: $base-font;
    
     //inner footer layout
     &__main{
+        @include max-width();
         @include flexbox(column);
-        margin: 0 auto;
-        padding: 0.5rem;
-        width: 85%;
-
+        
         //Layout side by side on large screens 
-        @media(min-width: 1275px){
+        @media(min-width: $large){
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-between;
         }
     }
 
     //Main Layout styles for lists 
     &__lists{
-        @media(min-width: 768px){
+        @media(min-width: $small){
             @include flexbox(null, wrap);
         }
 
-        @media(min-width: 991px){
+        @media(min-width: $medium){
             flex-wrap: nowrap;
         }
     }
-   
 }
 
 //Logo and social links
@@ -35,24 +32,24 @@
     font-weight: 300;
     margin: 1rem 0;
 
+    &__title{
+        margin-bottom: 2rem;
+    }
+
     &--image{
         margin-bottom: 1rem;
         width: 300px;
     }   
     
-    &__title{
-        margin-bottom: 2rem;
-    }
 //Layout of social icons 
     .footer__socials{
         @include flexbox(null, wrap);
         gap: 10px;
 
-        @media(min-width: 768px){
+        @media(min-width: $small){
             width: 50%;
             flex-wrap: nowrap;
         }
-    
     }
 //Stylin og social icons 
     .footer__socials--links{
@@ -86,11 +83,11 @@
         text-decoration: underline;
     }
 
-   @media(min-width: 768px) and (max-width: 990px){
+   @media(min-width: $small) and (max-width: 990px){
         width: 50%;
     }
 
-    @media(min-width: 1250px){
+    @media(min-width: $large){
         margin: 1rem;
         padding: 0.5rem;
     }

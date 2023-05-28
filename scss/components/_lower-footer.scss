@@ -4,10 +4,11 @@
         padding: 1rem;
         font-weight: 300;
         font-size: font-size(13px);
-        display: flex;
-        justify-content: center;
+        @include flexbox();
+        justify-content: flex-start;
         position: relative;
-        letter-spacing: .4px;
+        letter-spacing: $letter-spacing;
+
 
         &:hover a{
             text-decoration: underline;

@@ -1,0 +1,49 @@
+
+.header{
+
+    .inner__header{
+      
+        // margin: 0 auto;
+        @include flexbox(column);
+        position: relative;
+        &--links{
+            @include flexbox();
+        }
+
+        .btn-container{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        @media(min-width: 768px){
+            width: 85%;
+            max-width: 1200px;
+            
+        }
+
+        &--phone{
+            background: none;
+            border: none;
+            color: $primary-color;
+        }
+
+        &--hamburger{
+            background-color: $primary-color;
+            color: $white;
+        }
+
+        input{
+            width: 80%;
+            margin: 1rem;
+        }
+    
+    }
+
+
+
+    //Logo styles 
+    .logo{
+        width: 300px;
+    }
+}

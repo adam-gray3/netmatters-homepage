@@ -12,9 +12,23 @@
     <title>Netmatters</title>
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="scss/utilities/images/logo.png" alt="Netmatters"></a>
-        <button>Open</button>
+    <header class="header">
+        <div class="inner__header">
+            
+            <a href="index.html"><img src="scss/utilities/images/logo.png" alt="Netmatters" class="logo"></a>
+
+            <div class="btn-container">
+                <button class="inner__header--phone"><i class="fa fa-volume-control-phone fa-2x" aria-hidden="true"></i></button>
+                <button class="inner__header--hamburger"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
+            </div>
+           
+
+
+            <form action="">
+                <input type="text" placeholder="Search">
+            </form>
+
+        </div>
     </header>
 
     <main>
@@ -24,7 +38,28 @@
         <section>
             <h3>Second Section</h3>
         </section>
-  
+
+        <section class="newsletter__container">
+            <div class="newsletter">
+                <h2 class="newsletter__title">Email Newsletter Sign-Up</h2>
+                <form action="" class="newsletter__form">
+                    <div class="newsletter__form--input">
+                        <label for="name">Your Name <span class="required">*</span></label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="newsletter__form--input">
+                        <label for="email">Your email <span class="required">*</span></label>
+                        <input  type="email" name="email" id="email">
+                    </div>
+                    <div class="newsletter__advert">
+                        <input class="newsletter__advert--checkbox" type="checkbox">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est nostrum quod reprehenderit dolor quisquam qui.</p>
+                    </div>
+                    <button class="newsletter__form--btn" type="submit">SUBSCRIBE</button>
+                </form>
+              
+            </div>
+        </section>
     </main>
 
     <footer class="footer">

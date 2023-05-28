@@ -3,3 +3,9 @@
     flex-direction: $direction;
     flex-wrap: $wrap;
 }
+
+@mixin max-width() {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
