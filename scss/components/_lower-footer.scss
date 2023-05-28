@@ -1,0 +1,29 @@
+    //LOWER FOOTER STYLES
+    .footer__lower{
+        background-color: $dark-color;
+        padding: 1rem;
+        font-weight: 300;
+        font-size: font-size(13px);
+        display: flex;
+        justify-content: center;
+        position: relative;
+        letter-spacing: .4px;
+
+        &:hover a{
+            text-decoration: underline;
+        }
+
+        &--chat{
+            position: absolute;
+            top: -40px;
+            right: 10px;
+            background-color: $primary-color;
+            border-radius: 50%;
+            padding: 1rem;
+            border: 0;
+            box-shadow: 1px 1px $dark-color;
+            color: $white;
+            font-size: font-size(32px);
+            cursor: pointer;
+        }
+    }
