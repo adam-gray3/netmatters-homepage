@@ -1,3 +1,108 @@
+.bg-color-dropdown-bespoke {
+  background-color: #516680;
+}
+
+.icon-color-bespoke {
+  color: #667f9e;
+}
+
+.hover-color-bespoke:hover {
+  background-color: #667f9e;
+}
+.hover-color-bespoke:hover i {
+  color: #fff;
+}
+
+.bg-color-dropdown-support {
+  background-color: #286abd;
+}
+
+.icon-color-support {
+  color: #4183d7;
+}
+
+.hover-color-support:hover {
+  background-color: #4183d7;
+}
+.hover-color-support:hover i {
+  color: #fff;
+}
+
+.bg-color-dropdown-marketing {
+  background-color: #25a25a;
+}
+
+.icon-color-marketing {
+  color: #2ecc71;
+}
+
+.hover-color-marketing:hover {
+  background-color: #2ecc71;
+}
+.hover-color-marketing:hover i {
+  color: #fff;
+}
+
+.bg-color-dropdown-telecoms {
+  background-color: #bc2c28;
+}
+
+.icon-color-telecoms {
+  color: #d64541;
+}
+
+.hover-color-telecoms:hover {
+  background-color: #d64541;
+}
+.hover-color-telecoms:hover i {
+  color: #fff;
+}
+
+.bg-color-dropdown-design {
+  background-color: #765490;
+}
+
+.icon-color-design {
+  color: #906daa;
+}
+
+.hover-color-design:hover {
+  background-color: #906daa;
+}
+.hover-color-design:hover i {
+  color: #fff;
+}
+
+.bg-color-dropdown-cyber {
+  background-color: #de093f;
+}
+
+.icon-color-cyber {
+  color: #f62459;
+}
+
+.hover-color-cyber:hover {
+  background-color: #f62459;
+}
+.hover-color-cyber:hover i {
+  color: #fff;
+}
+
+.bg-color-dropdown-developer {
+  background-color: #a3331d;
+}
+
+.icon-color-developer {
+  color: #ce4125;
+}
+
+.hover-color-developer:hover {
+  background-color: #ce4125;
+}
+.hover-color-developer:hover i {
+  color: #fff;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -619,9 +724,7 @@ input[type=checkbox] {
 .nav__list--item {
   cursor: pointer;
   padding: 1.4rem;
-}
-.nav__list--item:hover {
-  background-color: #667f9e;
+  font-size: 1.25rem;
 }
 .nav span {
   font-size: 10px;
@@ -642,7 +745,6 @@ input[type=checkbox] {
   top: 100px;
   left: 0;
   min-width: 100%;
-  background-color: #516680;
 }
 .dropdown__container__list {
   width: 85%;
@@ -676,10 +778,6 @@ input[type=checkbox] {
 
 .nav__list--item:hover .dropdown__container {
   display: block;
-}
-
-.support:hover {
-  background-color: #4183d7;
 }
 
 /*# sourceMappingURL=index.css.map */

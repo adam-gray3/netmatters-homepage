@@ -1,3 +1,4 @@
 @function font-size ($size){
     @return ($size / 16px) * 1rem;
 }
+

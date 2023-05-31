@@ -7,14 +7,39 @@ $white: #fff;
 $black: #000;
 
 //Nav Colours
+$nav-colors:(
+    bespoke: #667f9e,
+    support: #4183d7,
+    marketing: #2ecc71, 
+    telecoms: #d64541, 
+    design: #906daa, 
+    cyber: #f62459, 
+    developer: #ce4125,
+);
 
-$bespoke: #667f9e;
-$support: #4183d7;
-$marketing: #000; 
-$telecoms: #f6f6f6; 
-$design: #ddd; 
-$cyber: #000; 
-$developer: #fff;
+
+//Loop for nav colours for icons and background of drop down 
+@each $nav-color, $color in $nav-colors {
+    //Background colour for drop down
+    .bg-color-dropdown-#{$nav-color}{
+        background-color: darken($color, 10);
+    }
+
+    //Icon color for main nav 
+    .icon-color-#{$nav-color}{
+        color: $color;
+    }
+
+    //Main nav background color on hover
+    .hover-color-#{$nav-color}:hover{
+        background-color: $color;
+
+        //Change icon to white when main nav is hovered 
+        i{
+            color: $white;
+        }
+    }
+}
 
 
 
