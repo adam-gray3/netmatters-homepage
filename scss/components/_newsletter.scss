@@ -17,50 +17,7 @@
         font-weight: 300;
     }
 
-    &__form{
-        @include flexbox(column);
-        &--input{
-            border: none;
-            
-            input{
-                width: 90%;
-                padding: 0.5rem;
-                margin-bottom: 1rem;
-            }
-
-            label{
-                display: inline-block;
-                margin-bottom: 1rem;
-                font-weight: 600;
-                color: $primary-color;
-            }
-
-            @media(min-width: $medium){
-                width: 50%;
-            }
-        }
-
-        //Form Button Styles
-        &--btn{
-            width: 125px;
-            padding: .75rem;
-            border: none;
-            background-color: $primary-color;
-            color: $white;
-            &:hover{
-                background-color: $dark-color;
-            }
-        }
-
-        .required{
-            color: red;
-        }
-//Change form layout on large screen
-        @media(min-width: $medium){
-            flex-direction: row;
-        }
-    }
-//Text & Checkbox Styles
+    //Text & Checkbox Styles
     &__advert{
         margin-bottom: 1rem;
         @include flexbox(null, nowrap);
@@ -73,3 +30,51 @@
     }
 }
 
+.newsletter__form{
+    @include flexbox(column);
+
+    //Change form layout on large screen
+    @media(min-width: $medium){
+        flex-direction: row;
+    }
+    
+    &--input{
+        border: none;
+    
+        input{
+            width: 90%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        label{
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: $primary-color;
+        }
+//Change input field size
+        @media(min-width: $medium){
+            width: 50%;
+        }
+    }
+
+    //Form Button Styles
+    &--btn{
+        width: 125px;
+        padding: .75rem;
+        border: none;
+        background-color: $primary-color;
+        color: $white;
+        &:hover{
+            background-color: $dark-color;
+        }
+    }
+}
+
+//Checkbox styles
+input[type=checkbox]{
+    width: 32px;
+    height: 32px;
+    accent-color: $primary-color;
+}

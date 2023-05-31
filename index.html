@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&amp;family=Poppins&amp;display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f794ebdf85.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/index.css">
     <title>Netmatters</title>
@@ -14,22 +14,73 @@
 <body>
     <header class="header">
         <div class="inner__header">
-            
-            <a href="index.html"><img src="scss/utilities/images/logo.png" alt="Netmatters" class="logo"></a>
 
+            <a href="index.html"><img src="scss/utilities/images/logo.png" alt="Netmatters" class="logo"></a>
             <div class="btn-container">
                 <button class="inner__header--phone"><i class="fa fa-volume-control-phone fa-2x" aria-hidden="true"></i></button>
                 <button class="inner__header--hamburger"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
             </div>
-           
-
-
-            <form action="">
-                <input type="text" placeholder="Search">
+            <form action="" class="inner__header__form">
+                <input type="text" placeholder="Search" class="inner__header__input">
             </form>
 
         </div>
     </header>
+
+    <nav class="nav">
+            <ul class="nav__list">
+
+                <li class="nav__list--item">
+                    <a href="#">
+                        <i class="fa fa-laptop bespoke" aria-hidden="true"></i>
+                        <span>BESPOKE</span>SOFTWARE
+                    </a>
+                    <div class="dropdown__container">
+                        <h3 class="dropdown__container--title">Our Bespoke Software Services</h3>
+                        <ul class="dropdown__container__list bespoke">
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i>Bespoke CRM</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i>Business Automation</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i>Software Intergrations</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>Mobile App Development</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-folder" aria-hidden="true"></i>Bespoke Datbases</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-share" aria-hidden="true"></i>Sharepoint Development</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-download" aria-hidden="true"></i>Operational Systems</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-users" aria-hidden="true"></i>Business Central Implementation</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-laptop" aria-hidden="true"></i>Internet of Things (IOT) Software</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-cloud" aria-hidden="true"></i>Intranet Development</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-cloud-download" aria-hidden="true"></i>Customer Portal Development</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-globe" aria-hidden="true"></i>Reporting Hub</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                
+                <li class="nav__list--item support">
+                    <a href="#">
+                        <i class="fa fa-desktop support" aria-hidden="true"></i>
+                        <span>IT</span> SUPPORT</a>
+                    </a>
+                    <div class="dropdown__container">
+                        <h3 class="dropdown__container--title">Our IT Support Services</h3>
+                        <ul class="dropdown__container__list">
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Manged IT Support</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i>Business IT Support</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>Office 365 for Business</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>IT Consultancy</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-cloud" aria-hidden="true"></i>Cloud Service Provider</a></li>
+                            <li class="dropdown__container__list--item"><a href="#"><i class="fa fa-hdd-o" aria-hidden="true"></i>Data Backup & Disaster Recovery</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                
+                <li class="nav__list--item"><i class="fa fa-signal" aria-hidden="true"></i><span>DIGITAL</span> MARKETING</li>
+                <li class="nav__list--item"><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>TELECOMS</span> Services</li>
+                <li class="nav__list--item"><i class="fa fa-code" aria-hidden="true"></i><span>WEB</span> DESIGN</li>
+                <li class="nav__list--item"><i class="fa fa-shield" aria-hidden="true"></i><span>CYBER</span> SECRUITY</li>
+                <li class="nav__list--item"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>DEVELOPER</span> COURSE</li>
+            </ul>
+    </nav>
 
     <main>
         <section>
@@ -57,7 +108,6 @@
                     </div>
                     <button class="newsletter__form--btn" type="submit">SUBSCRIBE</button>
                 </form>
-              
             </div>
         </section>
     </main>

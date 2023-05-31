@@ -1,0 +1,99 @@
+//MAIN NAV STYLES
+.nav{
+    @include flexbox();
+    height: 100px;
+    background-color: $primary-color;
+    color: $white;
+    font-family: $base-font;
+    text-align: center;
+    position: relative;
+    
+    //Main nav list styles
+    &__list{
+        @include flexbox(row, nowrap);
+        @include max-width;
+        justify-content: space-between;
+        align-items: center;
+      
+        &--item{
+            cursor: pointer;
+            padding: 1.4rem;
+
+            &:hover{
+                background-color: $bespoke;
+            }
+        }
+    }
+
+    //Change font size first word
+    span{
+        font-size: 10px;
+        display: block;
+    }
+
+    //Icon styles
+    i{
+        margin-bottom: 0.5rem;
+    }
+    //Remove nav on smaller screens
+    @media(max-width: 768px){
+        display: none;
+    }
+}
+
+//DROPDWON NAV STYLES
+.dropdown__container{
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    min-width: 100%;
+    background-color:  darken($bespoke, 10);
+   
+    //Dropdown list styles
+    &__list{
+        @include max-width;
+        @include flexbox();
+        justify-content: space-between;
+       
+        //Dropdown list item styles 
+        &--item{
+            width: 33.3%;
+            text-align: left;
+            margin-bottom: 2rem;
+            font-size: font-size(20px);
+
+            i{
+                margin-right: 1rem;
+                
+            }
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    //Dropdown list title 
+    &--title{
+        position: relative;
+        left: 210px;
+        font-size: font-size(28px);
+        margin: 2rem;
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+}
+
+//Show dropdown Nav List on hover
+.nav__list--item:hover .dropdown__container {
+    display: block;
+}
+
+
+.support{
+    &:hover{
+        background-color: $support;
+    }
+}
+
+
