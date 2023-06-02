@@ -1,23 +1,22 @@
-//MAIN NAV STYLES
+//MAIN NAV CONTAINER STYLES
 .nav{
     @include flexbox();
-    height: 100px;
+    height: 120px;
     background-color: $primary-color;
     color: $white;
     font-family: $base-font;
     text-align: center;
     position: relative;
-    
+
     //Main nav list styles
     &__list{
-        @include flexbox(row, nowrap);
+        @include flexbox(row, wrap, null, center);
         @include max-width;
-        justify-content: space-between;
-        align-items: center;
       
         &--item{
+           width: 14%;
             cursor: pointer;
-            padding: 1.4rem;
+            padding: 1.8rem;
             font-size: font-size(20px);
         }
     }
@@ -33,7 +32,7 @@
         margin-bottom: 0.5rem;
     }
     //Remove nav on smaller screens
-    @media(max-width: 768px){
+    @media(max-width: 1000px){
         display: none;
     }
 }
@@ -42,18 +41,17 @@
 .dropdown__container{
     display: none;
     position: absolute;
-    top: 100px;
     left: 0;
     min-width: 100%;
-
-    
+    top: 120px;
+    z-index: 1;
    
     //Dropdown list styles
     &__list{
         @include max-width;
         @include flexbox();
-        justify-content: space-between;
-       
+
+ 
         //Dropdown list item styles 
         &--item{
             width: 33.3%;
@@ -63,7 +61,6 @@
 
             i{
                 margin-right: 1rem;
-                
             }
 
             &:hover{
@@ -73,19 +70,44 @@
     }
     //Dropdown list title 
     &--title{
-        position: relative;
-        left: 210px;
+        @include max-width;
+        display: inline-block;
         font-size: font-size(28px);
-        margin: 2rem;
+        margin: 3rem 0;
         text-align: left;
-        margin-bottom: 3rem;
     }
 }
 
-//Show dropdown Nav List on hover
-.nav__list--item:hover .dropdown__container {
-    display: block;
+//Show dropdown Nav List & shape on hover
+.nav__list--item:hover .dropdown__container, 
+.nav__list--item:hover .arrow-down:after {
+    display: block
 }
 
+//Arrow styles 
+.arrow-down{
+    position: relative;
+}
 
+.arrow-down:after{
+    display: none;
+    content: "";
+    position: absolute;
+    margin: 0 auto;
+    top: 29px;
+    width: 0;
+    height: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    border-left: 85px solid transparent;
+    border-right: 85px solid transparent;
+    border-top: 45px solid;
+    transform: translateX(-50%);
+    z-index: 10;
+}   
 
+//Rotate shopping cart icon
+.fa-shopping-cart{
+    transform: scaleX(-1);
+}

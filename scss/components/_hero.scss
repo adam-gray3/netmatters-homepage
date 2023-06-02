@@ -1,0 +1,66 @@
+.hero__container{
+    background: url("../scss/utilities/images/cyber-hero.jpg") no-repeat center center/cover;
+    position: relative;
+    width: 100%;
+    height: 550px;
+
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.4);
+    }
+}
+
+//Text and Button Styles
+.hero__content{
+    @include max-width;
+    @include flexbox(column, null, center, center);
+    color: $white;
+    height: 100%;
+    font-family: $base-font;
+    text-align: center;
+    letter-spacing: $letter-spacing;
+
+    &--title{
+        font-size: font-size(40px);
+        margin-bottom: 1rem;
+    }
+
+    &--text{
+        font-size: font-size(18px);
+        font-weight: 600;
+        line-height: 1.8rem;
+    }
+    //Button Styles
+    &--btn{
+        padding: 1.2rem;
+        border: none;
+        margin-top: 2rem;
+        border-radius: 4px;
+        font-size: font-size(20px);
+        color: $white;
+
+        i{
+            margin-left: 1rem;
+        }
+    }
+
+    //Change font size and text position on larger screens 
+    @media(min-width: $medium){
+        align-items: flex-start;
+        text-align: left;
+
+        &--title{
+            font-size: font-size(62px);
+        }
+
+        &--text{
+            font-size: font-size(24px);
+        }
+    }
+}

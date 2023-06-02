@@ -1,0 +1,32 @@
+img{
+    width: 150px;
+    filter: grayscale(1);
+
+    &:hover{
+        filter: none;
+    }
+}
+
+.client-slider__images{
+    width: 100%;
+    @include flexbox(row, null, space-between, center);
+    gap: 30px;
+    overflow: hidden;
+
+    img{
+        margin-right: 3rem;
+    }
+}
+
+.client-slider--link{
+    font-size: font-size(28px);
+    font-family: $base-font;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: $black;
+
+    @media(min-width: $small){
+        display: none;
+    }
+}
+

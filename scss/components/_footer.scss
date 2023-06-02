@@ -2,29 +2,6 @@
     background-color: $primary-color;
     color: $white;
     font-family: $base-font;
-   
-    //inner footer layout
-    &__main{
-        @include max-width();
-        @include flexbox(column);
-        
-        //Layout side by side on large screens 
-        @media(min-width: $large){
-            flex-direction: row;
-            justify-content: space-between;
-        }
-    }
-
-    //Main Layout styles for lists 
-    &__lists{
-        @media(min-width: $small){
-            @include flexbox(null, wrap);
-        }
-
-        @media(min-width: $medium){
-            flex-wrap: nowrap;
-        }
-    }
 }
 
 //Logo and social links
@@ -42,41 +19,42 @@
     }   
     
 //Layout of social icons 
-    .footer__socials{
+    &__socials{
         @include flexbox(null, wrap);
         gap: 10px;
-
+       
         @media(min-width: $small){
             width: 50%;
             flex-wrap: nowrap;
         }
     }
-//Stylin og social icons 
-    .footer__socials--links{
-        width: 35%;
-        background-color: $dark-color;
-        padding: .75rem 1.25rem;
-        text-align: center;
+}
 
-        &:hover{
-            background: red;
-        }
+//Stylin for social icons 
+.footer__socials--links{
+    width: 35%;
+    padding: 1.25rem;
+    text-align: center;
+
+    @media(min-width: $small){
+        width: 100%;
     }
 }
 
 //List styles
 .footer__card{
     @include flexbox(column);
-    font-size: font-size(13px);
+    font-size: font-size(15px);
     letter-spacing: $letter-spacing;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     flex-grow: 1;
 
     //Headings for each list
     &__title{
         font-weight: 400;
         font-size: font-size(16px);
-        margin-bottom: .75em;
+        margin-bottom: .75rem;
+        margin-top: .75rem;
     }
 
     &--item a:hover{
@@ -88,7 +66,7 @@
     }
 
     @media(min-width: $large){
-        margin: 1rem;
+        margin: 0.75rem;
         padding: 0.5rem;
     }
 }

@@ -4,6 +4,7 @@
     padding: 1rem 0;  
 }
 
+//Newsletter styles
 .newsletter{
     @include max-width();
     @include flexbox(column);
@@ -20,8 +21,7 @@
     //Text & Checkbox Styles
     &__advert{
         margin-bottom: 1rem;
-        @include flexbox(null, nowrap);
-        align-items: flex-start;
+        @include flexbox(null, nowrap, null, flex-start);
         width: 100%;
 
         &--checkbox{
@@ -30,6 +30,7 @@
     }
 }
 
+//Form styles
 .newsletter__form{
     @include flexbox(column);
 
@@ -53,7 +54,7 @@
             font-weight: 600;
             color: $primary-color;
         }
-//Change input field size
+    //Change input field size
         @media(min-width: $medium){
             width: 50%;
         }

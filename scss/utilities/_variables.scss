@@ -18,7 +18,7 @@ $nav-colors:(
 );
 
 
-//Loop for nav colours for icons and background of drop down 
+//Loop through nav colours for icons and background of drop down 
 @each $nav-color, $color in $nav-colors {
     //Background colour for drop down
     .bg-color-dropdown-#{$nav-color}{
@@ -31,7 +31,7 @@ $nav-colors:(
     }
 
     //Main nav background color on hover
-    .hover-color-#{$nav-color}:hover{
+    .hover-color--#{$nav-color}:hover{
         background-color: $color;
 
         //Change icon to white when main nav is hovered 
@@ -39,8 +39,40 @@ $nav-colors:(
             color: $white;
         }
     }
+
+    .arrow-color--#{$nav-color}{
+        color: $color;
+    }
+
+    //Hero btn color
+    .btn-color--#{$nav-color}{
+        background-color: $color;
+
+        &:hover{
+            background-color: darken($color, 10);
+        }
+    }
 }
 
+//Social link colours
+$social-colors: (
+    fbook: #1877f2, 
+    ig: #f51288, 
+    twit: #1d9bf0, 
+    link: #0077b5
+);
+
+@each $link-color, $color in $social-colors {
+    .hover-color--#{$link-color}{
+        background-color: $dark-color;
+
+        &:hover{
+            background-color: $color;
+        }
+    }
+
+  
+}
 
 
 //Typography 

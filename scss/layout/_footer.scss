@@ -1,0 +1,17 @@
+//inner footer layout
+.footer__main{
+    @include max-width();
+    @include flexbox(column);
+    
+    // Layout side by side on large screens 
+    @media(min-width: $large){
+        @include flexbox(row, null, space-between, center);      
+    }
+}
+
+//Main Layout styles for lists 
+.footer__lists{
+    @media(min-width: $small){
+        @include flexbox(null, wrap);
+    }
+}
