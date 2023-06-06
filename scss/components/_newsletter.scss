@@ -1,7 +1,7 @@
 .newsletter__container{
     background-color: $secondary-color;
     font-family: $base-font; 
-    padding: 1rem 0;  
+    padding: 2rem 0;  
 }
 
 //Newsletter styles
@@ -20,7 +20,7 @@
 
     //Text & Checkbox Styles
     &__advert{
-        margin-bottom: 1rem;
+        margin: 2rem 0;
         @include flexbox(null, nowrap, null, flex-start);
         width: 100%;
 
@@ -44,7 +44,7 @@
     
         input{
             width: 90%;
-            padding: 0.5rem;
+            padding: 1rem;
             margin-bottom: 1rem;
         }
 
@@ -63,10 +63,11 @@
     //Form Button Styles
     &--btn{
         width: 125px;
-        padding: .75rem;
+        padding: 1rem;
         border: none;
         background-color: $primary-color;
         color: $white;
+        border-radius: 4px;
         &:hover{
             background-color: $dark-color;
         }

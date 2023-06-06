@@ -38,15 +38,19 @@
     }
     //Button Styles
     &--btn{
-        padding: 1.2rem;
+        padding: 1rem;
         border: none;
         margin-top: 2rem;
         border-radius: 4px;
-        font-size: font-size(20px);
-        color: $white;
+        font-size: font-size(16px);
 
         i{
             margin-left: 1rem;
+        }
+
+        @media(min-width: $medium){
+            font-size: font-size(22px);
+            padding: 1.2rem;
         }
     }
 

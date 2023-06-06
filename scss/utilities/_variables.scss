@@ -5,6 +5,8 @@ $action-color: #999aa2;
 $dark-color: #212330;
 $white: #fff;
 $black: #000;
+$grey: #cfcfcf;
+$dark-grey: #6a6a6a;
 
 //Nav Colours
 $nav-colors:(
@@ -15,6 +17,7 @@ $nav-colors:(
     design: #906daa, 
     cyber: #f62459, 
     developer: #ce4125,
+    dark: $dark-color
 );
 
 
@@ -47,6 +50,7 @@ $nav-colors:(
     //Hero btn color
     .btn-color--#{$nav-color}{
         background-color: $color;
+        color: $white;
 
         &:hover{
             background-color: darken($color, 10);
@@ -70,8 +74,6 @@ $social-colors: (
             background-color: $color;
         }
     }
-
-  
 }
 
 

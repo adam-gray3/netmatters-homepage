@@ -2,11 +2,14 @@
     .footer__lower{
         background-color: $dark-color;
         padding: 1rem;
-        font-weight: 300;
-        font-size: font-size(13px);
-        @include flexbox(row, null, center);
         position: relative;
-        letter-spacing: $letter-spacing;
+        
+        &__copyright{
+            @include max-width();
+            font-weight: 300;
+            font-size: font-size(13px);
+            letter-spacing: $letter-spacing;
+        }
 
         &:hover a{
             text-decoration: underline;

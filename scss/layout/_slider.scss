@@ -1,8 +1,12 @@
 
 //Layout for slider container
-.client-slider{
+.slider-container{
+    @include flexbox(column, nowrap, null, center);
+}
+
+//Image styles
+.image-container{
     width: 100%;
-    @include flexbox(column, null, null, center);
-    padding: 1rem 0;
-    margin: 2rem 0;
+    @include flexbox(row, null, space-around, center);
+    padding: 2rem 0;
 }

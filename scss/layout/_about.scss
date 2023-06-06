@@ -1,0 +1,35 @@
+
+//Layout for main content
+.about__content{
+    @include flexbox(column, nowrap);
+    font-size: font-size(18px);
+    
+    @media(min-width: $medium){
+        @include max-width();
+        flex-direction: row;
+    }
+}
+
+//Styles for each section
+.about__us, .about__clients{
+    margin: 1rem;
+    
+    @media(min-width: $medium){
+        width: 50%;
+    }
+}
+
+.btn-container{
+    @include flexbox(column);
+
+    
+    //Change button layout on medium screens
+    @media(min-width: 500px) and (max-width: $medium){
+        flex-direction: row;
+    }
+    //Change button layout on large screens
+    @media(min-width: $large){
+        flex-direction: row;
+        
+    }
+}

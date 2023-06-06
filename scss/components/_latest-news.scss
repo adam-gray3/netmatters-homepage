@@ -1,0 +1,88 @@
+.latest-news{
+    padding: 1rem;
+    font-family: $base-font;
+    line-height: 1.8;
+    overflow: hidden;
+
+    .heading{
+        @include flexbox(row, nowrap, space-between, center);
+        font-size: font-size(32px);
+        color: $primary-color;
+        a{
+            color: $primary-color;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    //Styles for each card 
+    &__card{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border: 1px solid $grey;
+        margin: 1rem 0.5rem;
+        color: grey;
+        cursor: pointer;
+        transition: 0.5s ease;
+
+        hr{
+            height: 1px;
+            background-color: $grey;
+            border: none;
+        }
+
+        //Move  card up on hover
+        &:hover{
+            transform: translateY(-10px);
+        }
+        
+        //Set main image to full width
+        img{
+            width: 100%;
+        }
+    }
+
+    //Styles for card content
+    &__content{
+        padding: 1rem 2rem;
+        
+        //Button styles
+        a{
+            padding: 0.75rem 1rem;
+            display: inline-block;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+        //Time to read styles
+        &--time{
+                color: $grey;
+                font-weight: 400;
+                font-size: font-size(14px);
+        }
+        //News type 
+        &--note{
+            margin-bottom: 2rem;
+            font-size: font-size(16px);
+            height: 40px;
+        }
+    }
+}
+
+
+//Posted by info styles
+.posted{
+    @include flexbox(row, nowrap, null, center);
+    color: $primary-color;
+    font-weight: 600;
+    padding: 2rem 0;
+
+    img{
+        width: 50px;
+        margin-right: 1rem;
+    }
+
+    &__by--date{
+        font-weight: 400;
+        color: $dark-grey;
+    }
+}

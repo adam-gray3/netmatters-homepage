@@ -11,3 +11,19 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+
+@mixin shape($bl, $br, $bt, $top, $left, $bottom: 0, $right){  
+        content: "";
+        position: absolute;
+        margin: 0 auto;
+        top: $top;
+        width: 0;
+        height: 0;
+        bottom: 0;
+        left: $left;
+        right: $right;
+        border-left: $bl solid transparent;
+        border-right: $br solid transparent;
+        border-top: $bt solid;
+        @content;
+}
