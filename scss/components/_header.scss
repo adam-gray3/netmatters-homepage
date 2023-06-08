@@ -6,12 +6,10 @@
         align-items: center;
         padding: 0.5rem 0;
         justify-content: space-between;
+        margin: 0.5rem;
 
         .btn-container{
-            margin-right: 1rem;
-            position: absolute;
-            top: 20px;
-            right: 10px;
+            @include flexbox(row, nowrap, space-between);
         }
 
         @media(min-width: 768px){
@@ -48,4 +46,51 @@
         }
     
     }
+}
+
+//Hamburger menu styles
+
+.hamburger-menu{
+    height: 50px;
+    width: 50px;
+    background-color: $primary-color;
+    position: relative;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+.ham-bar{
+    width: 70%;
+    height: 4px;
+    background-color: $white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: transform .6s, opacity .8s, top .6s;
+}
+
+.bar-top{
+    top: 25%;
+}
+
+.bar-bottom{
+    top: 75%;
+}
+
+//Show X when button is clicked, add active class using JavaScript
+.hamburger-menu.active .bar-top{
+    transform: translate(-50%,-50%) rotate(-315deg);
+    top: 50%;
+}
+
+.hamburger-menu.active .bar-mid{
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar-bottom{
+    transform: translate(-50%,-50%) rotate(-225deg);
+    top: 50%;
 }

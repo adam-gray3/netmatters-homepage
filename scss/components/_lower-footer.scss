@@ -3,6 +3,7 @@
         background-color: $dark-color;
         padding: 1rem;
         position: relative;
+        margin-top: 1rem;
         
         &__copyright{
             @include max-width();
@@ -16,8 +17,8 @@
         }
 
         &--chat{
-            position: absolute;
-            top: -40px;
+            position: fixed;
+            bottom: 20px;
             right: 10px;
             background-color: $primary-color;
             border-radius: 50%;

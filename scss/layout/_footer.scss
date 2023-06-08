@@ -9,9 +9,29 @@
     }
 }
 
+//Layout for footer cards 
+.footer__card{
+    @include flexbox(column);
+
+    @media(min-width: $small) and (max-width: 990px){
+        width: 50%;
+    }
+
+    @media(min-width: $large){
+        margin: 0.75rem;
+        padding: 0.5rem;
+    }
+}
+
 //Main Layout styles for lists 
 .footer__lists{
     @media(min-width: $small){
         @include flexbox(null, wrap);
     }
+}
+
+//Layout for footer social links 
+.footer__info__socials{
+    @include flexbox(null, wrap);
+    gap: 10px;
 }

@@ -1,0 +1,66 @@
+
+.heading{
+    @include flexbox(row, nowrap, space-between, center);
+    margin-top: 2rem;
+
+    &--title{
+        font-size: font-size(42px);
+        margin: 1.5rem;
+        color: $primary-color;
+    }
+
+    &--link{
+        color: $primary-color;
+        font-weight: 600;
+        font-size: font-size(22px);
+
+        &:hover{
+            text-decoration: underline;
+        }
+
+        @media(max-width: $small){
+            display: none;
+        }
+    }
+}
+
+.our-services__container{
+    //Styles for each card
+    &__card{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border: 1px solid $grey;
+        padding: 0.5rem;
+        margin: 1rem 0;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: 0.5s ease;
+
+        &:hover{
+            transform: translateY(-15px);
+        }
+    }
+
+    &--btn{
+        margin-bottom: 1rem;
+    }
+
+    h4{
+        font-weight: 400;
+        font-size: font-size(22px);
+        color: $primary-color;
+    }
+
+    p{
+        font-size: font-size(14px);
+        margin: 1rem;
+        line-height: 1.8;
+        color: $dark-grey;
+    }
+}
+
+//Styles for icons
+.icon{
+    padding: 1rem;
+    border-radius: 50%;
+    margin: 1rem;
+}

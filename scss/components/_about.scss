@@ -61,17 +61,13 @@
     &--btn{
         align-self: flex-start;
         margin: 1rem 0;
-        padding: 1rem;
         font-weight: 400;
-        border: 0;
         color: $white;
-        border-radius: 4px;
         margin-right: 1rem;
         font-size: font-size(20px);
         cursor: pointer;
     }
-
-    
+    //Icon inside button
     i{
         margin-left: 0.5rem;
     }

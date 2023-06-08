@@ -20,9 +20,11 @@
 
     //Text & Checkbox Styles
     &__advert{
-        margin: 2rem 0;
         @include flexbox(null, nowrap, null, flex-start);
-        width: 100%;
+        margin: 2rem 0;
+       font-weight: 600;
+       line-height: 1.8;
+       color: $primary-color;
 
         &--checkbox{
             margin-right: 1rem;
@@ -63,11 +65,8 @@
     //Form Button Styles
     &--btn{
         width: 125px;
-        padding: 1rem;
-        border: none;
         background-color: $primary-color;
         color: $white;
-        border-radius: 4px;
         &:hover{
             background-color: $dark-color;
         }

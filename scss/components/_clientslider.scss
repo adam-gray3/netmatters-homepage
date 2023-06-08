@@ -1,11 +1,10 @@
 //Main section styles
 .slider-container{
     font-family: $base-font;
-    overflow: hidden;
     
     //Set image size and greyscale as default
     img{
-        width: 125px;
+        width: 100px;
         filter: grayscale(1);
         &:hover{
             filter: none;
@@ -13,21 +12,23 @@
     }
 }
 
+
 //Set parent to relative position for popup
 .image-container__content{
     position: relative;
     margin: 0 2rem;
-//Styles for popup box on hover
+    
+    //Styles for popup box on hover
     &--popup{
             display: none;
-            position: fixed;
-            top: 30px;
-            margin-left: -80px;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
             background-color: $primary-color;
             color: $white;
             padding: 2rem; 
             width: 300px;
-            // transform: translateX(-55%);
+            transform: translateX(-50%);
             z-index: 1;
             text-align: center;
         
@@ -63,7 +64,7 @@
 .slider-container--link{
     font-size: font-size(28px);
     font-weight: 600;
-    margin-bottom: 3rem;
+    margin: 0.5rem;
     color: $black;
 
     @media(min-width: $small){

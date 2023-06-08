@@ -2,53 +2,43 @@
     background-color: $primary-color;
     color: $white;
     font-family: $base-font;
+    padding-top: 1rem;
 }
 
 //Logo and social links
 .footer__info{
     font-weight: 300;
     margin: 1rem 0;
-
+    
     &__title{
         margin-bottom: 2rem;
+        font-weight: 300;
     }
 
     &--image{
         margin-bottom: 1rem;
-        width: 150px;
+        width: 250px;
 
         @media(min-width: $small){
-            width: 300px;
+            width: 320px;
         }
     }   
-    
-//Layout of social icons 
-    &__socials{
-        @include flexbox(null, wrap);
-        gap: 10px;
-       
-        @media(min-width: $small){
-            width: 50%;
-            flex-wrap: nowrap;
-        }
-    }
 }
 
-//Stylin for social icons 
+//Styling for social icons 
 .footer__socials--links{
-    width: 35%;
-    padding: 1.25rem;
+    width: 33.3%;
+    padding: 1rem 1.5rem;
     text-align: center;
 
-    @media(min-width: $small){
-        width: 100%;
+    @media(min-width: 700px){
+        width: auto;
     }
 }
 
 //List styles
 .footer__card{
-    @include flexbox(column);
-    font-size: font-size(15px);
+    font-size: font-size(13px);
     letter-spacing: $letter-spacing;
     line-height: 1.5rem;
     flex-grow: 1;
@@ -63,14 +53,5 @@
 
     &--item a:hover{
         text-decoration: underline;
-    }
-
-   @media(min-width: $small) and (max-width: 990px){
-        width: 50%;
-    }
-
-    @media(min-width: $large){
-        margin: 0.75rem;
-        padding: 0.5rem;
-    }
+    }    
 }

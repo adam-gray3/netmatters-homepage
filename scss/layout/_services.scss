@@ -1,0 +1,37 @@
+.our-services__wrapper{
+    margin: 1rem;
+    text-align: center;
+    font-family: $base-font;
+
+    @media(min-width: $small){
+        @include max-width();
+    }
+}
+
+.our-services__container{
+    @include flexbox(column, wrap, space-between);
+
+    &__card{
+        flex-grow: 1;
+    }
+    //Change layout for medium screens
+    @media(min-width: 770px){
+        div:nth-last-child(-n+4){
+            width: 45%;
+        }
+        
+        flex-direction: row;
+        column-gap: 30px;        
+    }
+
+ //Change layout for large screens
+    @media(min-width: $large){
+        div:nth-child(-n+3){
+          width: 30%;
+        }
+       
+        div:nth-last-child(-n+4){
+            width: 22%;
+        }
+    }
+}

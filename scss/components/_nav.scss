@@ -7,7 +7,7 @@
     font-family: $base-font;
     text-align: center;
     position: relative;
-
+    
     //Main nav list styles
     &__list{
         @include flexbox(row, wrap, null, center);

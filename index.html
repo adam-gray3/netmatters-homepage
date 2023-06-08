@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Netmatters homepage">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&amp;family=Poppins&amp;display=swap" rel="stylesheet">
@@ -12,18 +13,22 @@
     <title>Netmatters</title>
 </head>
 <body>
+    <div class="wrap"> 
     <header class="header">
         <div class="inner__header">
-
             <a href="index.html"><img src="scss/utilities/images/logo.png" alt="Netmatters" class="logo"></a>
             <div class="btn-container">
                 <button class="inner__header--phone"><i class="fa fa-volume-control-phone fa-2x" aria-hidden="true"></i></button>
-                <button class="inner__header--hamburger"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
+                <div class="hamburger-menu">
+                    <div class="ham-bar bar-top"></div>
+                    <div class="ham-bar bar-mid"></div>
+                    <div class="ham-bar bar-bottom"></div>
+                </div>
+                <!-- <button class="inner__header--hamburger" aria-label="menu button"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button> -->
             </div>
-            <form action="" class="inner__header__form">
+            <form action="#" method="post" class="inner__header__form">
                 <input type="text" placeholder="Search" class="inner__header__input">
             </form>
-
         </div>
     </header>
 
@@ -164,7 +169,6 @@
     </nav>
 
     <main>
-
         <section class="hero__container">
             <div class="overlay">
                 <div class="hero__content">
@@ -175,9 +179,58 @@
             </div>
         </section>
 
-        <section class="slider-container">
-            <a href="" class="slider-container--link">View Our Work <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-  
+        <section class="our-services__wrapper">
+            <div class="heading">
+                <h2 class="heading--title">Our Services</h2>
+                <a class="heading--link" href="#">View Our Work <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="our-services__container">
+                <div class="our-services__container__card hover-services--bespoke">
+                    <i class="fa fa-laptop fa-2x icon-services-bespoke icon" aria-hidden="true"></i>
+                    <h4>Bespoke Software</h4>
+                    <p>Bespoke software solutions for all your business needs including intergrations and reporting.</p>
+                    <button class="our-services__container--btn btn-color--bespoke btn">READ MORE</button>
+                </div>
+                <div class="our-services__container__card hover-services--support">
+                    <i class="fa fa-desktop fa-2x icon-services-support icon" aria-hidden="true"></i>
+                    <h4>IT SUPPORT</h4>
+                    <p>Fully managed IT support and consultancy packages tailored to meet your exact business needs.</p>
+                    <button class="our-services__container--btn btn-color--support btn">READ MORE</button>
+                </div>
+                <div class="our-services__container__card hover-services--marketing">
+                    <i class="fa fa-signal fa-2x icon-services-marketing icon" aria-hidden="true"></i>
+                    <h4>Digital Marketing</h4>
+                    <p>Driven brand awarness & ROI through creative digital marketing campaigns.</p>
+                    <button class="our-services__container--btn btn-color--marketing btn">READ MORE</button>
+                </div>
+                <div class="our-services__container__card hover-services--telecoms">
+                    <i class="fa fa-volume-control-phone fa-2x icon-services-telecoms icon" aria-hidden="true"></i>
+                    <h4>Telecoms Services</h4>
+                    <p>Business telephony solutions including mobile & connectivity solutions.</p>
+                    <button class="our-services__container--btn btn-color--telecoms btn">READ MORE</button>
+                </div>
+                <div class="our-services__container__card hover-services--design">
+                    <i class="fa fa-code fa-2x icon-services-design icon" aria-hidden="true"></i>
+                    <h4>Web Design</h4>
+                    <p>User-centric design for businesses looking to make a lasting impression.</p>
+                    <button class="our-services__container--btn btn-color--design btn">READ MORE</button>
+                </div>
+                <div class="our-services__container__card hover-services--cyber">
+                    <i class="fa fa-shield fa-2x icon-services-cyber icon" aria-hidden="true"></i>
+                    <h4>Cyber Secruity</h4>
+                    <p>Prevention, testing, consultancy & breach management services.</p>
+                    <button class="our-services__container--btn btn-color--cyber btn">READ MORE</button>
+                </div>
+                <div class="our-services__container__card hover-services--developer">
+                    <i class="fa fa-graduation-cap fa-2x icon-services-developer icon" aria-hidden="true"></i>
+                    <h4>Developer Training</h4>
+                    <p>Web design & software training course desinged to secure a job in tech.</p>
+                    <button class="our-services__container--btn btn-color--developer btn">READ MORE</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="slider-container">  
             <div class="image-container">
                 <div class="image-container__content">
                     <img src="scss/utilities/images/carbon.jpg" alt="carbon charter">
@@ -218,7 +271,7 @@
                     <img src="scss/utilities/images/beat-client.jpg" alt="">
                 </div>           -->
             </div>
-        </section>
+        </div>
 
 
         <section class="about">
@@ -229,8 +282,8 @@
                     <p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p> <br>
                     <p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
                     <div class="btn-container">
-                        <a href="#" class="btn-container--btn btn-color--dark">WHY CHOOSE US? <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        <a href="#" class="btn-container--btn btn-color--dark">OUR CULTURE  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="#" class="btn-container--btn btn-color--dark btn">WHY CHOOSE US? <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="#" class="btn-container--btn btn-color--dark btn">OUR CULTURE  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="about__clients">
@@ -245,8 +298,8 @@
                     <p>Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are! <p><br><br>
                      <p class="quote"><span>Eleanor Bishop, Head of Marketing</span> - Ashcroft Partnership LLP</p>
                        <div class="btn-container">
-                            <a href="#" class="btn-container--btn btn-color--support">GOOGLE REVIEWS <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            <a href="#" class="btn-container--btn btn-color--marketing">TRUSTPILOT REVIEWS  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            <a href="#" class="btn-container--btn btn-color--support btn">GOOGLE REVIEWS <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            <a href="#" class="btn-container--btn btn-color--marketing btn">TRUSTPILOT REVIEWS  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                 </div>
             </div>
@@ -260,11 +313,13 @@
 
             <div class="latest-news__cards">
                 <div class="latest-news__card">
+                    <a href="#" class="card-link" aria-label="case studies"></a> 
+                    <div class="latest-news__card--tag btn-color--support">NEWS</div>
                     <img src="scss/utilities/images/news-img-1.jpg" alt="">
                     <div class="latest-news__content">
                         <h5 class="latest-news__content--note icon-color-support">April Notables 2023 <span class="latest-news__content--time">- 4 MINUTE READ</span></h5>
                         <p>Each month, various departments recognise those employess who have excelled in their work and helped...</p>
-                        <a href="#" class="btn-color--support">READ MORE</a>
+                        <a class="latest-news__content--btn btn-color--support btn" href="#">READ MORE</a>
                         <hr>
                         <div class="posted">
                             <img src="scss/utilities/images/small-logo.jpg" alt="">
@@ -276,11 +331,13 @@
                     </div>
                 </div>
                 <div class="latest-news__card">
+                    <a href="#" class="card-link" aria-label="case studies"></a>
+                    <div class="latest-news__card--tag btn-color--support">CASE STUDIES</div>
                     <img src="scss/utilities/images/news-img-2.jpg" alt="">
                     <div class="latest-news__content">
                         <h5 class="latest-news__content--note icon-color-support">Staying Secure & Connected With Netmatters -...<span class="latest-news__content--time">- 6 MINUTE READ</span></h5>
                         <p>The Client Urban Mission Schools and Community (UMSC) is an independent school aiming to re-engage y...</p>
-                        <a href="#" class="btn-color--support">READ MORE</a>
+                        <a class="latest-news__content--btn btn-color--support btn" href="#">READ MORE</a>
                         <hr>
                         <div class="posted">
                             <img src="scss/utilities/images/small-logo.jpg" alt="">
@@ -292,11 +349,13 @@
                     </div>
                 </div>
                 <div class="latest-news__card">
+                    <a href="#" class="card-link" aria-label="case studies"></a>
+                    <div class="latest-news__card--tag btn-color--design">CASE STUDIES</div>
                     <img src="scss/utilities/images/news-img-3.jpg" alt="">
                     <div class="latest-news__content">
                         <h5 class="latest-news__content--note icon-color-design">Glaven Valley - Web Case Study <span class="latest-news__content--time">- 5 MINUTE READ</span></h5>
                         <p>The Client Since 2001, Glaven Valley has been a leading platform for the listing and booking of self-...</p>
-                        <a href="#" class="btn-color--design">READ MORE</a>
+                        <a class="latest-news__content--btn btn-color--design btn" href="#">READ MORE</a>
                         <hr>
                         <div class="posted">
                             <img src="scss/utilities/images/small-logo.jpg" alt="">
@@ -313,9 +372,7 @@
 
         <section class="slider-container">
             <a href="" class="slider-container--link">View Our Work <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-  
             <div class="image-container">
-
                 <div class="image-container__content">
                     <div class="image-container__content--popup">
                         <h4>Beat</h4>
@@ -328,7 +385,7 @@
 
                 <div class="image-container__content">
                     <div class="image-container__content--popup">
-                        <h4>Beat</h4>
+                        <h4>Black Swan Care Group</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptates!</p>
                         <button class="btn-color--developer">View Our Case Study</button>
                         <div class="shape"></div>
@@ -339,17 +396,16 @@
 
                 <div class="image-container__content">
                     <div class="image-container__content--popup">
-                        <h4>Beat</h4>
+                        <h4>Xupes</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptates!</p>
                         <button class="btn-color--bespoke">View Our Case Study</button>
                         <div class="shape"></div>
                     </div>
-                    
                     <img src="scss/utilities/images/xupes.jpg" alt="">
                 </div>            
                 <div class="image-container__content">
                     <div class="image-container__content--popup">
-                        <h4>Beat</h4>
+                        <h4>GDST</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptates!</p>
                         <button class="btn-color--design">View Our Case Study</button>
                         <div class="shape"></div>
@@ -359,7 +415,7 @@
                 </div>            
                 <div class="image-container__content">
                     <div class="image-container__content--popup">
-                        <h4>Beat</h4>
+                        <h4>Survey Solutions</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptates!</p>
                         <button class="btn-color--marketing">View Our Case Study</button>
                         <div class="shape"></div>
@@ -369,7 +425,7 @@
                 </div>            
                 <div class="image-container__content">
                     <div class="image-container__content--popup">
-                        <h4>Beat</h4>
+                        <h4>Girl Guiding Anglia</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptates!</p>
                         <button>View Our Case Study</button>
                         <div class="shape"></div>
@@ -379,7 +435,7 @@
                 </div>            
                 <div class="image-container__content">
                     <div class="image-container__content--popup">
-                        <h4>Beat</h4>
+                        <h4>Sweetzy</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptates!</p>
                         <button>View Our Case Study</button>
                         <div class="shape"></div>
@@ -387,19 +443,19 @@
                     
                     <img src="scss/utilities/images/sweetzy.jpg" alt="">
                 </div>            
-                <!-- <div class="image-container__content">
+                <div class="image-container__content">
                     <div class="image-container__content--popup">
-                        <h4>Beat</h4>
+                        <h4>Howes Percival</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptates!</p>
                         <button>View Our Case Study</button>
                         <div class="shape"></div>
                     </div>
                     
                     <img src="scss/utilities/images/howes.jpg" alt="">
-                </div>              -->
-                <!-- <div class="image-container__content">
+                </div>             
+                <div class="image-container__content">
                     <div class="image-container__content--popup">
-                        <h4>Beat</h4>
+                        <h4>Ashcroft Partnership LLP</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptates!</p>
                         <button>View Our Case Study</button>
                         <div class="shape"></div>
@@ -409,7 +465,7 @@
                 </div>            
                 <div class="image-container__content">
                     <div class="image-container__content--popup">
-                        <h4>Beat</h4>
+                        <h4>Searles Lesiure Resort</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptates!</p>
                         <button>View Our Case Study</button>
                         <div class="shape"></div>
@@ -436,7 +492,7 @@
                     </div>
                     
                     <img src="scss/utilities/images/beat-client.jpg" alt="">
-                </div>           -->
+                </div>          
             </div>
         </section>
 
@@ -445,7 +501,7 @@
         <section class="newsletter__container">
             <div class="newsletter">
                 <h2 class="newsletter__title">Email Newsletter Sign-Up</h2>
-                <form action="" class="newsletter__form">
+                <form action="#" method="post" class="newsletter__form">
                     <div class="newsletter__form--input">
                         <label for="name">Your Name <span class="required">*</span></label>
                         <input type="text" name="name" id="name">
@@ -455,10 +511,10 @@
                         <input  type="email" name="email" id="email">
                     </div>
                     <div class="newsletter__advert">
-                        <input class="newsletter__advert--checkbox" type="checkbox">
+                        <input name="checkbox" class="newsletter__advert--checkbox" type="checkbox" aria-label="checkbox">
                         <p>Please tick this box if you wish to receive marketing information from us. Please see our Privacy Policy for more information on how we keep your data safe.</p>
                     </div>
-                    <button class="newsletter__form--btn" type="submit">SUBSCRIBE</button>
+                    <button class="newsletter__form--btn btn" type="submit">SUBSCRIBE</button>
                 </form>
             </div>
         </section>
@@ -470,58 +526,58 @@
                 <img src="scss/utilities/images/logo-white.png" alt="Netmatters" class="footer__info--image">
                 <h4 class="footer__info__title">FOLLOW US ON:</h4>
                 <div class="footer__info__socials">
-                    <a href="https://www.facebook.com" target="_blank" class="footer__socials--links hover-color--fbook"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com" target="_blank" class="footer__socials--links hover-color--link"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>                  
-                    <a href="https://www.twitter.com" target="_blank" class="footer__socials--links hover-color--twit"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com" target="_blank" class="footer__socials--links hover-color--ig"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" class="footer__socials--links hover-color--fbook" aria-label="facebook"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="footer__socials--links hover-color--link" aria-label="linkedin"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>                  
+                    <a href="https://www.twitter.com" target="_blank" class="footer__socials--links hover-color--twit" aria-label="twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" class="footer__socials--links hover-color--ig" aria-label="instagram"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="footer__lists"> 
                 <div class="footer__card">
                     <h5 class="footer__card__title">ABOUT NETMATTERS</h5>
                     <ul class="footer__card__list">
-                        <li class="footer__card--item"><a href="">News</a></li>
-                        <li class="footer__card--item"><a href="">Our Careers</a></li>
-                        <li class="footer__card--item"><a href="">Our Team</a></li>
-                        <li class="footer__card--item"><a href="">Privacy Policy</a></li>
-                        <li class="footer__card--item"><a href="">Cookie Policy</a></li>
-                        <li class="footer__card--item"><a href="">Terms & Conditions</a></li>
-                        <li class="footer__card--item"><a href="">Enviromental Policy</a></li>
-                        <li class="footer__card--item"><a href="">Contact Us</a></li>
+                        <li class="footer__card--item"><a href="#">News</a></li>
+                        <li class="footer__card--item"><a href="#">Our Careers</a></li>
+                        <li class="footer__card--item"><a href="#">Our Team</a></li>
+                        <li class="footer__card--item"><a href="#">Privacy Policy</a></li>
+                        <li class="footer__card--item"><a href="#">Cookie Policy</a></li>
+                        <li class="footer__card--item"><a href="#">Terms & Conditions</a></li>
+                        <li class="footer__card--item"><a href="#">Enviromental Policy</a></li>
+                        <li class="footer__card--item"><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer__card">
                     <h5 class="footer__card__title">OUR SERVICES</h5>
                     <ul class="footer__card__list">
-                        <li class="footer__card--item"><a href="">Bespoke Software</a></li>
-                        <li class="footer__card--item"><a href="">IT Support</a></li>
-                        <li class="footer__card--item"><a href="">Digital Marketing</a></li>
-                        <li class="footer__card--item"><a href="">Telecoms Services</a></li>
-                        <li class="footer__card--item"><a href="">Web Design</a></li>
-                        <li class="footer__card--item"><a href="">Cyber Secruity</a></li>
-                        <li class="footer__card--item"><a href="">Developer Training</a></li>
+                        <li class="footer__card--item"><a href="#">Bespoke Software</a></li>
+                        <li class="footer__card--item"><a href="#">IT Support</a></li>
+                        <li class="footer__card--item"><a href="#">Digital Marketing</a></li>
+                        <li class="footer__card--item"><a href="#">Telecoms Services</a></li>
+                        <li class="footer__card--item"><a href="#">Web Design</a></li>
+                        <li class="footer__card--item"><a href="#">Cyber Secruity</a></li>
+                        <li class="footer__card--item"><a href="#">Developer Training</a></li>
                     </ul>
                 </div>
                 <div class="footer__card">
                     <h5 class="footer__card__title">OUR INDUSTRIES</h5>
                     <ul class="footer__card__list">
-                        <li class="footer__card--item"><a href="">Financial Services</a></li>
-                        <li class="footer__card--item"><a href="">Construction</a></li>
-                        <li class="footer__card--item"><a href="">Retail & E-Commerce</a></li>
-                        <li class="footer__card--item"><a href="">Non-Profits</a></li>
-                        <li class="footer__card--item"><a href="">SME's</a></li>
-                        <li class="footer__card--item"><a href="">Healthcare</a></li>
-                        <li class="footer__card--item"><a href="">Education & Training</a></li>
-                        <li class="footer__card--item"><a href="">Travel & Lesiure</a></li>
+                        <li class="footer__card--item"><a href="#">Financial Services</a></li>
+                        <li class="footer__card--item"><a href="#">Construction</a></li>
+                        <li class="footer__card--item"><a href="#">Retail & E-Commerce</a></li>
+                        <li class="footer__card--item"><a href="#">Non-Profits</a></li>
+                        <li class="footer__card--item"><a href="#">SME's</a></li>
+                        <li class="footer__card--item"><a href="#">Healthcare</a></li>
+                        <li class="footer__card--item"><a href="#">Education & Training</a></li>
+                        <li class="footer__card--item"><a href="#">Travel & Lesiure</a></li>
                     </ul>
                 </div>
                 <div class="footer__card">
                     <h5 class="footer__card__title">LOCATIONS</h5>
                     <ul class="footer__card__list">
-                        <li class="footer__card--item"><a href="">London Office</a></li>
-                        <li class="footer__card--item"><a href="">Cambridge Office</a></li>
-                        <li class="footer__card--item"><a href="">Wymondham Office</a></li>
-                        <li class="footer__card--item"><a href="">Great Yarmouth Office</a></li>
+                        <li class="footer__card--item"><a href="#">London Office</a></li>
+                        <li class="footer__card--item"><a href="#">Cambridge Office</a></li>
+                        <li class="footer__card--item"><a href="#">Wymondham Office</a></li>
+                        <li class="footer__card--item"><a href="#">Great Yarmouth Office</a></li>
                     </ul>
                 </div>
             </div>
@@ -531,8 +587,9 @@
             <div class="footer__lower__copyright">
                 &copy; Copyright Netmatters 2023. All rights reserved. - <span><a href="#">Sitemap</a></span>
             </div>
-            <button class="footer__lower--chat"><i class="fa fa-commenting-o" aria-hidden="true"></i></button>
+            <button class="footer__lower--chat" aria-label="chat box"><i class="fa fa-commenting-o" aria-hidden="true"></i></button>
         </div>
     </footer>
+</div>
 </body>
 </html>

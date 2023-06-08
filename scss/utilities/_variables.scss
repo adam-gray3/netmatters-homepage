@@ -21,7 +21,7 @@ $nav-colors:(
 );
 
 
-//Loop through nav colours for icons and background of drop down 
+//Loop through nav colours for icons and background of drop downs 
 @each $nav-color, $color in $nav-colors {
     //Background colour for drop down
     .bg-color-dropdown-#{$nav-color}{
@@ -33,6 +33,32 @@ $nav-colors:(
         color: $color;
     }
 
+    //Services icon colours
+    .icon-services-#{$nav-color}{
+        background-color: $color;
+        color: $white;
+    }
+ 
+    //Services Hover Effect
+    .hover-services--#{$nav-color}:hover{
+        background-color: $color;
+        
+        button{
+            background-color: $white;
+            color: $color;
+        }
+
+        h4,p{
+            color: $white;
+        }
+
+        i{
+            color: $color;
+            background-color: $white;
+        }
+    }
+
+ 
     //Main nav background color on hover
     .hover-color--#{$nav-color}:hover{
         background-color: $color;
@@ -56,7 +82,7 @@ $nav-colors:(
             background-color: darken($color, 10);
         }
     }
-}
+};
 
 //Social link colours
 $social-colors: (
@@ -82,7 +108,7 @@ $base-font: 'Poppins', sans-serif;
 $letter-spacing: .4px;
 
 
-//Breaks
+//Break Points
 $small: 768px;
 $medium: 991px;
 $large: 1250px;
