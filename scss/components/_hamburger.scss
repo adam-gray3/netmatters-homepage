@@ -1,0 +1,49 @@
+//Hamburger menu styles
+.hamburger-menu{
+    height: 45px;
+    width: 45px;
+    background-color: $primary-color;
+    position: relative;
+    cursor: pointer;
+    padding: 1.5rem;
+    border-radius: 2px;
+
+    &:hover{
+        background-color: darken($primary-color, 10);
+    }
+}
+
+.ham-bar{
+    width: 70%;
+    height: 3px;
+    background-color: $white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: transform .6s, opacity .8s, top .6s;
+}
+
+.bar-top{
+    top: 25%;
+}
+
+.bar-bottom{
+    top: 75%;
+}
+
+//Show X when button is clicked, add active class using JavaScript
+.hamburger-menu.active .bar-top{
+    transform: translate(-50%,-50%) rotate(-315deg);
+    top: 50%;
+}
+
+.hamburger-menu.active .bar-mid{
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar-bottom{
+    transform: translate(-50%,-50%) rotate(-225deg);
+    top: 50%;
+}

@@ -1,0 +1,43 @@
+.nav{
+    @include flexbox();
+    height: 110px;
+    text-align: center;
+    position: relative;
+    //Main nav items layout
+    &__list{
+        @include flexbox(row, nowrap, center, center);
+        @include max-width;
+    }
+
+     //Remove nav on smaller screens
+     @media(max-width: $medium){
+        display: none;
+    }
+}
+
+//Dropdown nav layout
+.dropdown__container{
+    display: none;
+    position: absolute;
+    left: 0;
+    min-width: 100%;
+    top: 110px;
+    z-index: 1;
+    //Dropdown nav items
+    &__list{
+        @include max-width;
+        @include flexbox();
+
+        //Dropdown list item layout
+        &--item{
+            width: 33.3%;
+        }
+    }
+
+    //Dropdown list title 
+    &--title{
+        @include max-width;
+        display: inline-block;
+        margin: 3rem 0;
+    }
+}

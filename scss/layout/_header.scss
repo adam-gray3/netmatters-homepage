@@ -1,0 +1,80 @@
+.inner__header{
+    //Layout for inner header 
+    @include flexbox(row, wrap, space-between, center);
+    padding: 0.5rem 0;
+    margin: 0.5rem;
+
+    //Set max width on larger screens 
+    @media(min-width: $small){
+        @include max-width();
+        //Hide phone Button
+        &--phone{
+            display: none;
+        }   
+        //Change order of flex items to put menu in right corner
+        &--btn-container{
+            order: 2;
+            margin-left: 20px;
+        }       
+    }
+}
+
+//Set width of form 
+.inner__header--form{
+    width: 100%;
+    //Shrink form on tablet size 
+    @media(min-width: $small){
+        width: 35%;
+        margin-left: auto;
+    }
+    //Hide form and input on larger screens
+    @media(min-width: $medium) and (max-width: 1300px){
+        width: 0;
+        margin-left: 60px;
+        input{
+            display: none;
+        }
+    }
+    //Margin between buttons and form very large 
+    @media(min-width: $xlarge){
+        margin-left: 10px;
+    }
+}
+
+
+//Layout for phone & hamburger buttons 
+.inner__header--btn-container{
+    @include flexbox();
+}
+
+//Support & Contact Button Layout 
+.inner__header--btn-contact{
+    @include flexbox();
+    display: none;
+    //Margin between buttons when displayed 
+    button{
+        margin: 0 0.5rem;
+    }
+    //Push buttons to right side of screen to overide justify value
+    @media(min-width: $small){
+        margin-left: auto;
+    }
+
+    //Display buttons on medium size screens
+    @media(min-width: $medium){
+        display: block;
+    }
+}
+
+//Serach bar icon layout
+.input-icons{
+    position: relative;
+}
+
+//Search bar icon position
+.input-icons i{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}

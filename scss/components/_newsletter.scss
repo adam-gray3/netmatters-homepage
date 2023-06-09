@@ -11,7 +11,7 @@
 
     &__title{
         width: 75%;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         margin-bottom: .5rem;
         color: $primary-color;
         font-size: font-size(26px);
@@ -35,7 +35,7 @@
 //Form styles
 .newsletter__form{
     @include flexbox(column);
-
+    margin-top: 1rem;
     //Change form layout on large screen
     @media(min-width: $medium){
         flex-direction: row;

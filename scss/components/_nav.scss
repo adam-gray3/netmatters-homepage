@@ -1,23 +1,16 @@
 //MAIN NAV CONTAINER STYLES
 .nav{
-    @include flexbox();
-    height: 120px;
     background-color: $primary-color;
     color: $white;
     font-family: $base-font;
-    text-align: center;
-    position: relative;
-    
+
     //Main nav list styles
     &__list{
-        @include flexbox(row, wrap, null, center);
-        @include max-width;
-      
         &--item{
-           width: 14%;
+            flex: 1;
             cursor: pointer;
-            padding: 1.8rem;
-            font-size: font-size(20px);
+            padding: 1.5rem;
+            font-size: font-size(18px);
         }
     }
 
@@ -31,51 +24,28 @@
     i{
         margin-bottom: 0.5rem;
     }
-    //Remove nav on smaller screens
-    @media(max-width: 1000px){
-        display: none;
-    }
 }
 
-//DROPDWON NAV STYLES
-.dropdown__container{
-    display: none;
-    position: absolute;
-    left: 0;
-    min-width: 100%;
-    top: 120px;
-    z-index: 1;
-   
-    //Dropdown list styles
-    &__list{
-        @include max-width;
-        @include flexbox();
+ //Dropdown list item styles 
+.dropdown__container__list--item{
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: font-size(20px);
 
- 
-        //Dropdown list item styles 
-        &--item{
-            width: 33.3%;
-            text-align: left;
-            margin-bottom: 2rem;
-            font-size: font-size(20px);
-
-            i{
-                margin-right: 1rem;
-            }
-
-            &:hover{
-                text-decoration: underline;
-            }
-        }
+    i{
+        margin-right: 1rem;
     }
-    //Dropdown list title 
-    &--title{
-        @include max-width;
-        display: inline-block;
-        font-size: font-size(28px);
-        margin: 3rem 0;
-        text-align: left;
-    }
+
+    &:hover{
+        text-decoration: underline;
+    } 
+}
+
+
+//Dropdown list title 
+.dropdown__container--title{
+    font-size: font-size(28px);
+    text-align: left;
 }
 
 
@@ -88,14 +58,18 @@
 //Arrow styles 
 .arrow-down{
     position: relative;
-  
 }
 
 .arrow-down:after{
-    @include shape(85px,85px,45px,29.5px,50%,0,0);
+    @include shape(85px,85px,35px,25px,50%,0,0);
     display: none;
-    z-index: 50;
+    z-index: 10;
     transform: translateX(-50%);
+    //Resize border on smaller screens as cannot use percentage for border values 
+    @media(min-width: $small) and (max-width: $large){
+        border-left: 65px solid transparent;
+        border-right: 65px solid transparent;
+    }
 }  
 
 //Rotate shopping cart icon

@@ -1,0 +1,79 @@
+//Loop through nav colours for icons and background of drop downs 
+@each $nav-color, $color in $nav-colors {
+    //Background colour for drop down
+    .bg-color-dropdown-#{$nav-color}{
+        background-color: darken($color, 10);
+    }
+
+    //Icon color for main nav 
+    .icon-color-#{$nav-color}{
+        color: $color;
+    }
+
+    //Services icon colours
+    .icon-services-#{$nav-color}{
+        background-color: $color;
+        color: $white;
+    }
+ 
+    //Services Hover Effect
+    .hover-services--#{$nav-color}:hover{
+        background-color: $color;
+        
+        button{
+            background-color: $white;
+            color: $color;
+        }
+
+        h4,p{
+            color: $white;
+        }
+
+        i{
+            color: $color;
+            background-color: $white;
+        }
+    }
+
+ 
+    //Main nav background color on hover
+    .hover-color--#{$nav-color}:hover{
+        background-color: $color;
+        //Change icon to white when main nav is hovered 
+        i{
+            color: $white;
+        }
+    }
+
+    .arrow-color--#{$nav-color}{
+        color: $color;
+    }
+
+    //Hero btn color
+    .btn-color--#{$nav-color}{
+        background-color: $color;
+        color: $white;
+
+        &:hover{
+            background-color: darken($color, 10);
+        }
+    }
+};
+
+//Social link colours
+$social-colors: (
+    fbook: #1877f2, 
+    ig: #f51288, 
+    twit: #1d9bf0, 
+    link: #0077b5
+);
+
+@each $link-color, $color in $social-colors {
+    .hover-color--#{$link-color}{
+        background-color: $dark-color;
+
+        &:hover{
+            background-color: $color;
+        }
+    }
+}

@@ -1,96 +1,47 @@
 
-.header{
-
-    .inner__header{
-        @include flexbox();
-        align-items: center;
-        padding: 0.5rem 0;
-        justify-content: space-between;
-        margin: 0.5rem;
-
-        .btn-container{
-            @include flexbox(row, nowrap, space-between);
-        }
-
-        @media(min-width: 768px){
-            @include max-width();
-            flex-wrap: nowrap;
-           
-            &--phone{
-                display: none;
-            }   
-        }
-
-        &--phone{
-            background: none;
-            border: none;
-            color: $primary-color;
-            font-size: font-size(14px);
-        }
-
-        &--hamburger{
-            background-color: $primary-color;
-            color: $white;
-        }
-
-       
-        &__form{
-            width: 100%;
-        }
-
-        &__input{
-            width: 90%;
-            margin: 1rem;
-            background-color: $secondary-color;
-            padding: 1rem;
-        }
+//Inner header styles
+.inner__header{
+    &--phone{
+        background: none;
+        border: none;
+        color: $primary-color;
+        font-size: font-size(12px);
+    }
     
+
+    &__input{
+        width: 100%;
+        margin: 1rem 0;
+        padding: 1rem;
+        border: 1px solid $grey;
+        background-color: rgba(0,0,0,0.1);
+        //Change input background colour
+        @media(min-width: $small){
+            background-color: $white;
+        }
+    }   
+
+    // Margin between button text & icon
+    &--btn-contact i{
+        margin-right: 0.5rem;
     }
 }
 
-//Hamburger menu styles
 
-.hamburger-menu{
-    height: 50px;
-    width: 50px;
-    background-color: $primary-color;
-    position: relative;
+//Search icon styles
+.search{
+    color: $primary-color;
+    padding: .9rem;
     cursor: pointer;
-    padding: 1rem 2rem;
-    border-radius: 2px;
+    font-size: font-size(22px);
+    &:hover{
+        background-color: darken($search-grey, 10);
+    }
+    //Change icon colour & background
+    @media(min-width: $small){
+        background-color: $search-grey;
+        color: $white;
+    }
 }
 
-.ham-bar{
-    width: 70%;
-    height: 4px;
-    background-color: $white;
-    border-radius: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    transition: transform .6s, opacity .8s, top .6s;
-}
 
-.bar-top{
-    top: 25%;
-}
-
-.bar-bottom{
-    top: 75%;
-}
-
-//Show X when button is clicked, add active class using JavaScript
-.hamburger-menu.active .bar-top{
-    transform: translate(-50%,-50%) rotate(-315deg);
-    top: 50%;
-}
-
-.hamburger-menu.active .bar-mid{
-    opacity: 0;
-}
-
-.hamburger-menu.active .bar-bottom{
-    transform: translate(-50%,-50%) rotate(-225deg);
-    top: 50%;
-}
