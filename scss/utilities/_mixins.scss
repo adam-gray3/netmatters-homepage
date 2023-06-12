@@ -12,6 +12,7 @@
     margin: 0 auto;
 }
 
+//Custom Shape
 @mixin shape($bl, $br, $bt, $top, $left, $bottom: 0, $right){  
         content: "";
         position: absolute;
@@ -25,4 +26,91 @@
         border-right: $br solid transparent;
         border-top: $bt solid;
         @content;
+}
+
+//Custom checkbox 
+@mixin checkbox(){
+    //Style label element
+    .check-container{
+        position: relative;
+        display: block;
+        margin-right: 3rem;
+        cursor: pointer;
+    }
+    //Hide default checkbox
+    .check-container input{
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+    //Create custom checkbox
+    .checkmark{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 35px;
+        width: 35px;
+        background-color: inherit;
+        border: 3px solid $primary-color;
+        border-radius: 4px;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .check-container input:checked ~ .checkmark:after {
+      display: block; 
+    }
+    //Background colour when checked 
+    .check-container input:checked ~ .checkmark {
+     background-color: $primary-color;
+    }
+
+    /* Style the checkmark/indicator */
+    .check-container .checkmark:after {
+        left: 10px;
+        top: 4px;
+        width: 6px;
+        height: 15px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(40deg);
+    }
+}
+
+//Media Query Mixin 
+@mixin mq($size){
+    @if $size == "small"{
+        @media(min-width: $small){
+            @content;
+        }
+    }
+
+    @else if $size == "medium" {
+        @media(min-width: $medium){
+            @content;
+        }
+    }
+
+    @else if $size == "large" {
+        @media(min-width: $large){
+            @content;
+        }
+    }
+
+    @else if $size == "xlarge" {
+        @media(min-width: $xlarge){
+            @content;
+        }
+    }
+
+    @else {
+        @error "#{$size} is not a valid media size";
+    }
 }

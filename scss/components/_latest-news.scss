@@ -1,6 +1,5 @@
 .latest-news{
     padding: 1rem;
-    font-family: $base-font;
     line-height: 1.8;
     overflow: hidden;
 
@@ -10,9 +9,15 @@
         color: $primary-color;
         a{
             color: $primary-color;
+            display: none;
             &:hover{
                 text-decoration: underline;
             }
+            //Show link above mobile size
+            @include mq(small){
+                display: block;
+            }
+            
         }
     }
 

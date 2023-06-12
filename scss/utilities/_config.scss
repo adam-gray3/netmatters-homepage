@@ -35,7 +35,6 @@
         }
     }
 
- 
     //Main nav background color on hover
     .hover-color--#{$nav-color}:hover{
         background-color: $color;
@@ -76,4 +75,8 @@ $social-colors: (
             background-color: $color;
         }
     }
+}
+
+.input-effect:focus{
+    box-shadow: 0 0 4px #2fbbc5;
 }

@@ -1,0 +1,26 @@
+//Main newsletter layout
+.newsletter{
+    @include max-width();
+    @include flexbox(column);
+
+    &__advert{
+        @include flexbox(null, nowrap, null);
+        @include checkbox();
+    }
+}
+
+//Newsletter form layout
+.newsletter__form{
+    @include flexbox(column);
+
+    //Change form layout on medium screen
+    @include mq(medium){
+        flex-direction: row;
+    }
+      //Expand input div elements to 50% on bigger screens
+    &--input{
+        @include mq(medium){
+            width: 50%;
+       }
+    }
+}

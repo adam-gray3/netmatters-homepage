@@ -67,7 +67,7 @@
     margin: 0.5rem;
     color: $black;
 
-    @media(min-width: $small){
+    @include mq(small){
         display: none;
     }
 }

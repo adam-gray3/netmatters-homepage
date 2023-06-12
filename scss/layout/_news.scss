@@ -1,6 +1,6 @@
 .latest-news{
     //Add max width for larger screens 
-    @media(min-width: $medium){
+    @include mq(medium){
         @include max-width();
     }
 }
@@ -10,11 +10,11 @@
     @include flexbox(column, nowrap);
     
     //Change layout of cards on bigger screens
-    @media(min-width: $small){
+    @include mq(small){
         flex-direction: row;
     }
     //Center items on larger screens 
-    @media(min-width: $large){
+    @include mq(large){
         justify-content: center;
     }
 
@@ -23,13 +23,13 @@
 //Styles for each card
 .latest-news__card{
     //Remove last item above mobile 
-    @media(min-width: $small){
+    @include mq(small){
         &:last-child{
             display: none;
         }
     }
     //Show all items on large screens 
-    @media(min-width: $large){
+    @include mq(large){
         min-width: 33.33%;
         &:last-child{
             display: block;

@@ -3,7 +3,7 @@
     text-align: center;
     font-family: $base-font;
 
-    @media(min-width: $small){
+    @include mq(small){
         @include max-width();
     }
 }
@@ -15,7 +15,7 @@
         flex-grow: 1;
     }
     //Change layout for medium screens
-    @media(min-width: 770px){
+    @include mq(small){
         div:nth-last-child(-n+4){
             width: 45%;
         }
@@ -25,11 +25,12 @@
     }
 
  //Change layout for large screens
-    @media(min-width: $large){
+    @include mq(large){
+        //Split first 3 elements
         div:nth-child(-n+3){
           width: 30%;
         }
-       
+       //Split last four elements
         div:nth-last-child(-n+4){
             width: 22%;
         }

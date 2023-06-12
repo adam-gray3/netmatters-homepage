@@ -4,27 +4,30 @@
     padding: 0.5rem 0;
     margin: 0.5rem;
 
-    //Set max width on larger screens 
-    @media(min-width: $small){
+
+    //Set max width on larger screens media query
+    @include mq(small){
         @include max-width();
-        //Hide phone Button
-        &--phone{
-            display: none;
-        }   
-        //Change order of flex items to put menu in right corner
-        &--btn-container{
-            order: 2;
-            margin-left: 20px;
-        }       
+            //Hide phone Button
+            &--phone{
+                display: none;
+            }   
+            //Change order of flex items to put menu in right corner
+            &--btn-container{
+                order: 2;
+                margin-left: 20px;
+            }       
     }
 }
+
 
 //Set width of form 
 .inner__header--form{
     width: 100%;
     //Shrink form on tablet size 
-    @media(min-width: $small){
-        width: 35%;
+    @include mq(small){
+        width: 30%;
+        //Space between logo and form
         margin-left: auto;
     }
     //Hide form and input on larger screens
@@ -35,8 +38,8 @@
             display: none;
         }
     }
-    //Margin between buttons and form very large 
-    @media(min-width: $xlarge){
+
+    @include mq(large){
         margin-left: 10px;
     }
 }
@@ -55,13 +58,9 @@
     button{
         margin: 0 0.5rem;
     }
-    //Push buttons to right side of screen to overide justify value
-    @media(min-width: $small){
+    //Show buttons on medium screens and push to right side
+    @include mq(medium){
         margin-left: auto;
-    }
-
-    //Display buttons on medium size screens
-    @media(min-width: $medium){
         display: block;
     }
 }

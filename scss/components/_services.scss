@@ -5,21 +5,23 @@
 
     &--title{
         font-size: font-size(42px);
-        margin: 1.5rem;
+        margin: 1rem 0;
         color: $primary-color;
+        text-align: left;
     }
 
     &--link{
         color: $primary-color;
         font-weight: 600;
         font-size: font-size(22px);
+        display: none;
 
         &:hover{
             text-decoration: underline;
         }
 
-        @media(max-width: $small){
-            display: none;
+        @include mq(medium){
+            display: block;
         }
     }
 }

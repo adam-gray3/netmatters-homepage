@@ -34,9 +34,6 @@ input{
     outline: none;
     border: none;
     transition: 0.2s ease;
-    &:focus{
-        box-shadow: 0 0 4px #2fbbc5;
-    }
 }
 
 .required{

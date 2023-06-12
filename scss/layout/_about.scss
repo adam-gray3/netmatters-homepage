@@ -3,16 +3,19 @@
 .about__content{
     @include flexbox(column, nowrap);
     font-size: font-size(18px);
-    
-    @media(min-width: $medium){
+    //Add minium width after mobile size
+    @media(min-width: $small){
         @include max-width();
+    }
+    //Change flex layout
+    @media(min-width: $medium){
         flex-direction: row;
     }
 }
 
 //Styles for each section
 .about__us, .about__clients{
-    margin: 1rem;
+    margin: 0 1rem;
     
     @media(min-width: $medium){
         width: 50%;
@@ -30,6 +33,5 @@
     //Change button layout on large screens
     @media(min-width: $large){
         flex-direction: row;
-        
     }
 }

@@ -1,8 +1,10 @@
+//Main nav layout
 .nav{
     @include flexbox();
     height: 110px;
     text-align: center;
     position: relative;
+    display: none;
     //Main nav items layout
     &__list{
         @include flexbox(row, nowrap, center, center);
@@ -10,8 +12,8 @@
     }
 
      //Remove nav on smaller screens
-     @media(max-width: $medium){
-        display: none;
+     @include mq(medium){
+        display: block;
     }
 }
 

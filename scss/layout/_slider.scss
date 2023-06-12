@@ -8,5 +8,5 @@
 .image-container{
     width: 100%;
     @include flexbox(row, null, space-around, center);
-    padding: 2rem 0;
+    padding: 1rem 0;
 }

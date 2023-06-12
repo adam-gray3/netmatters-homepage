@@ -16,7 +16,7 @@
         border: 1px solid $grey;
         background-color: rgba(0,0,0,0.1);
         //Change input background colour
-        @media(min-width: $small){
+        @include mq(small){
             background-color: $white;
         }
     }   
@@ -37,8 +37,8 @@
     &:hover{
         background-color: darken($search-grey, 10);
     }
-    //Change icon colour & background
-    @media(min-width: $small){
+    //Change icon colour & background above mobile 
+    @include mq(small){
         background-color: $search-grey;
         color: $white;
     }

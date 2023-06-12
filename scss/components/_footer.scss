@@ -1,7 +1,6 @@
 .footer{
     background-color: $primary-color;
     color: $white;
-    font-family: $base-font;
     padding-top: 1rem;
 }
 
@@ -18,8 +17,8 @@
     &--image{
         margin-bottom: 1rem;
         width: 250px;
-
-        @media(min-width: $small){
+        //Increase logo above mobile
+        @include mq(small){
             width: 320px;
         }
     }   
@@ -31,7 +30,7 @@
     padding: 1rem 1.5rem;
     text-align: center;
 
-    @media(min-width: 700px){
+    @include mq(small){
         width: auto;
     }
 }

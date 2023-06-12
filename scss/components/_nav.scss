@@ -2,18 +2,15 @@
 .nav{
     background-color: $primary-color;
     color: $white;
-    font-family: $base-font;
 
-    //Main nav list styles
-    &__list{
-        &--item{
-            flex: 1;
-            cursor: pointer;
-            padding: 1.5rem;
-            font-size: font-size(18px);
-        }
+    //Main nav list item styles
+    &__list--item{
+        flex: 1;
+        cursor: pointer;
+        padding: 1.6rem;
+        font-size: font-size(18px);
     }
-
+    
     //Change font size first word
     span{
         font-size: 10px;
@@ -61,14 +58,14 @@
 }
 
 .arrow-down:after{
-    @include shape(85px,85px,35px,25px,50%,0,0);
+    @include shape(65px,65px,35px,26px,50%,0,0);
     display: none;
     z-index: 10;
     transform: translateX(-50%);
-    //Resize border on smaller screens as cannot use percentage for border values 
-    @media(min-width: $small) and (max-width: $large){
-        border-left: 65px solid transparent;
-        border-right: 65px solid transparent;
+    //Resize border on large screens
+    @include mq(large){
+        border-left: 85px solid transparent;
+        border-right: 85px solid transparent;
     }
 }  
 

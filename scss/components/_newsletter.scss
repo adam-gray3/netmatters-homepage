@@ -1,53 +1,45 @@
 .newsletter__container{
     background-color: $secondary-color;
-    font-family: $base-font; 
     padding: 2rem 0;  
 }
 
 //Newsletter styles
 .newsletter{
-    @include max-width();
-    @include flexbox(column);
-
     &__title{
         width: 75%;
         margin-top: 1rem;
         margin-bottom: .5rem;
         color: $primary-color;
-        font-size: font-size(26px);
+        font-size: font-size(32px);
         font-weight: 300;
     }
 
     //Text & Checkbox Styles
     &__advert{
-        @include flexbox(null, nowrap, null, flex-start);
         margin: 2rem 0;
        font-weight: 600;
        line-height: 1.8;
-       color: $primary-color;
-
-        &--checkbox{
-            margin-right: 1rem;
-        }
+       color: $primary-color;       
     }
 }
 
 //Form styles
 .newsletter__form{
-    @include flexbox(column);
     margin-top: 1rem;
-    //Change form layout on large screen
-    @media(min-width: $medium){
-        flex-direction: row;
-    }
-    
+ 
+    //Form input styles
     &--input{
         border: none;
     
+        //Input element styles
         input{
-            width: 90%;
+            width: 100%;
             padding: 1rem;
             margin-bottom: 1rem;
+            //Reduce inputs on medium screens
+            @include mq(medium){
+                width: 90%;
+            }
         }
 
         label{
@@ -55,10 +47,6 @@
             margin-bottom: 1rem;
             font-weight: 600;
             color: $primary-color;
-        }
-    //Change input field size
-        @media(min-width: $medium){
-            width: 50%;
         }
     }
 
@@ -73,9 +61,3 @@
     }
 }
 
-//Checkbox styles
-input[type=checkbox]{
-    width: 32px;
-    height: 32px;
-    accent-color: $primary-color;
-}

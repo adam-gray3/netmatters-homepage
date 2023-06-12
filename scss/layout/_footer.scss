@@ -4,20 +4,21 @@
     @include flexbox(column);
     
     // Layout side by side on large screens 
-    @media(min-width: $large){
+    @include mq(large){
         @include flexbox(row, null, space-between, center);      
+        width: 100%;
     }
 }
 
 //Layout for footer cards 
 .footer__card{
     @include flexbox(column);
-
+    //Make lists 50% wide to place side by side 
     @media(min-width: $small) and (max-width: 990px){
         width: 50%;
     }
-
-    @media(min-width: $large){
+    //Padding & margin between lists on large screens 
+    @include mq(large){
         margin: 0.75rem;
         padding: 0.5rem;
     }
@@ -25,7 +26,7 @@
 
 //Main Layout styles for lists 
 .footer__lists{
-    @media(min-width: $small){
+    @include mq(small){
         @include flexbox(null, wrap);
     }
 }
