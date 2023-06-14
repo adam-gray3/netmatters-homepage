@@ -813,6 +813,11 @@ input {
     max-width: 400px;
   }
 }
+@media (max-width: 350px) {
+  .logo {
+    width: 150px;
+  }
+}
 
 .btn {
   padding: 1rem;
@@ -1134,17 +1139,6 @@ input {
   }
 }
 
-.slider-container {
-  font-family: "Poppins", sans-serif;
-}
-.slider-container img {
-  width: 100px;
-  filter: grayscale(1);
-}
-.slider-container img:hover {
-  filter: none;
-}
-
 .image-container__content {
   position: relative;
   margin: 0 2rem;
@@ -1169,6 +1163,14 @@ input {
   margin: 1rem;
   padding: 0.75rem;
   border: none;
+}
+
+.slider-container img {
+  width: 100px;
+  filter: grayscale(1);
+}
+.slider-container img:hover {
+  filter: none;
 }
 
 .image-container__content:hover .image-container__content--popup {
@@ -1271,7 +1273,6 @@ input {
 .latest-news {
   padding: 1rem;
   line-height: 1.8;
-  overflow: hidden;
 }
 .latest-news .heading {
   display: flex;
@@ -1294,6 +1295,7 @@ input {
     display: block;
   }
 }
+
 .latest-news__card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border: 1px solid #cfcfcf;
@@ -1327,6 +1329,7 @@ input {
 .latest-news__card--tag:hover {
   text-decoration: underline;
 }
+
 .latest-news__content {
   padding: 0.5rem 1.5rem;
 }
@@ -1505,7 +1508,7 @@ input {
   flex-direction: column;
   flex-wrap: wrap;
 }
-@media (min-width: 768px) and (max-width: 990px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .footer__card {
     width: 50%;
   }

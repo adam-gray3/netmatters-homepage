@@ -1,18 +1,3 @@
-//Main section styles
-.slider-container{
-    font-family: $base-font;
-    
-    //Set image size and greyscale as default
-    img{
-        width: 100px;
-        filter: grayscale(1);
-        &:hover{
-            filter: none;
-        }
-    }
-}
-
-
 //Set parent to relative position for popup
 .image-container__content{
     position: relative;
@@ -41,6 +26,15 @@
                 padding: .75rem;
                 border: none;
             }
+    }
+}
+
+.slider-container img{
+    //Set image size and greyscale as default
+    width: 100px;
+    filter: grayscale(1);
+    &:hover{
+        filter: none;
     }
 }
 

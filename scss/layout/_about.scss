@@ -4,11 +4,11 @@
     @include flexbox(column, nowrap);
     font-size: font-size(18px);
     //Add minium width after mobile size
-    @media(min-width: $small){
+    @include mq(small){
         @include max-width();
     }
     //Change flex layout
-    @media(min-width: $medium){
+    @include mq(medium){
         flex-direction: row;
     }
 }
@@ -17,7 +17,7 @@
 .about__us, .about__clients{
     margin: 0 1rem;
     
-    @media(min-width: $medium){
+    @include mq(medium){
         width: 50%;
     }
 }
@@ -31,7 +31,7 @@
         flex-direction: row;
     }
     //Change button layout on large screens
-    @media(min-width: $large){
+    @include mq(large){
         flex-direction: row;
     }
 }

@@ -4,7 +4,6 @@
     padding: 0.5rem 0;
     margin: 0.5rem;
 
-
     //Set max width on larger screens media query
     @include mq(small){
         @include max-width();

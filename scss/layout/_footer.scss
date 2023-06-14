@@ -14,7 +14,7 @@
 .footer__card{
     @include flexbox(column);
     //Make lists 50% wide to place side by side 
-    @media(min-width: $small) and (max-width: 990px){
+    @media(min-width: $small) and (max-width: $medium){
         width: 50%;
     }
     //Padding & margin between lists on large screens 

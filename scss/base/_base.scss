@@ -6,7 +6,7 @@
 
 
 h1, h2, h3, h4, h5{
-    font-family: 'Poppins', sans-serif;
+    font-family: $base-font;
 }
 
 a{
@@ -46,6 +46,11 @@ input{
     max-width: 250px;
     @media(min-width: $medium){
         max-width: 400px;
+    }
+
+    //Shrink logo for very small screens
+    @media(max-width: 350px){
+        width: 150px;
     }
 }
 
