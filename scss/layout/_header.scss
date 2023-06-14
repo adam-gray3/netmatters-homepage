@@ -37,10 +37,6 @@
             display: none;
         }
     }
-
-    @include mq(large){
-        margin-left: 10px;
-    }
 }
 
 
@@ -53,6 +49,7 @@
 .inner__header--btn-contact{
     @include flexbox();
     display: none;
+ 
     //Margin between buttons when displayed 
     button{
         margin: 0 0.5rem;

@@ -980,9 +980,6 @@ input {
     background-color: #fff;
   }
 }
-.inner__header--btn-contact button {
-  padding: 1.25rem;
-}
 .inner__header--btn-contact i {
   margin-right: 0.5rem;
 }
@@ -1714,11 +1711,6 @@ input {
   }
   .inner__header--form input {
     display: none;
-  }
-}
-@media (min-width: 1250px) {
-  .inner__header--form {
-    margin-left: 10px;
   }
 }
 
