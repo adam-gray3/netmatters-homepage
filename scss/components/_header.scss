@@ -20,6 +20,10 @@
             background-color: $white;
         }
     }   
+    //Increase padding for buttons in header
+    &--btn-contact button{
+        padding: 1.25rem;
+    }
 
     // Margin between button text & icon
     &--btn-contact i{
