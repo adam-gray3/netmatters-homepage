@@ -27,7 +27,7 @@
 //Styling for social icons 
 .footer__socials--links{
     width: 33.3%;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
     text-align: center;
 
     @include mq(small){
@@ -48,6 +48,7 @@
         font-size: font-size(16px);
         margin-bottom: .75rem;
         margin-top: .75rem;
+        padding: 0.5rem 0;
     }
 
     &--item a:hover{

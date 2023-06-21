@@ -49,8 +49,8 @@ input{
     }
 
     //Shrink logo for very small screens
-    @media(max-width: 350px){
-        width: 150px;
+    @media(max-width: 376px){
+       max-width: 215px;
     }
 }
 

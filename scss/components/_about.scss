@@ -3,7 +3,7 @@
     color: $white;
     letter-spacing: $letter-spacing;
     
-    //Chaneg paragraph line height
+    //Change paragraph line height
     p{
         line-height: 1.8;
     }
@@ -42,6 +42,7 @@
         }
         .quote{
             font-size: 16px;
+            margin-bottom: 2rem;
         }
     }
 
@@ -73,5 +74,22 @@
     //Icon inside button
     i{
         margin-left: 0.5rem;
+    }
+
+    //Button colours 
+    .trustpilot-review{
+        background-color: #00b67b;
+
+        &:hover{
+            background-color: darken(#00b67b, 5);
+        }
+    }
+
+    .google-review{
+        background-color: #4387f6;
+
+        &:hover{
+            background-color: darken(#4387f6, 5);
+        }
     }
 }

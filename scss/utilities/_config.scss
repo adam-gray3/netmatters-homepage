@@ -20,7 +20,7 @@
     .hover-services--#{$nav-color}:hover{
         background-color: $color;
         
-        button{
+        button, span{
             background-color: $white;
             color: $color;
         }

@@ -35,4 +35,10 @@
             width: 22%;
         }
     }
+
+    @media(min-width: 768px) and (orientation: landscape){
+        div:nth-child(-n+3){
+            width: 30%;
+          }
+    }
 }

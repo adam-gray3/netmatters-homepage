@@ -1,36 +1,38 @@
 .latest-news{
+    padding: 0 1.5rem;
     //Add max width for larger screens 
     @include mq(medium){
         @include max-width();
+        padding: 0;
     }
 }
 
 //Styles for card container
 .latest-news__cards{
     @include flexbox(column, nowrap);
+  
     
     //Change layout of cards on bigger screens
     @include mq(small){
         flex-direction: row;
+        grid-gap: 30px;
     }
-    //Center items on larger screens 
-    @include mq(large){
-        justify-content: center;
-    }
-
 }
 
 //Styles for each card
 .latest-news__card{
     //Remove last item above mobile 
     @include mq(small){
+        width: 50%;
         &:last-child{
             display: none;
         }
     }
+  
+
     //Show all items on large screens 
     @include mq(large){
-        min-width: 33.33%;
+        width: 31%;
         &:last-child{
             display: block;
         }

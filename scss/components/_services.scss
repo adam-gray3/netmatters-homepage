@@ -20,7 +20,7 @@
             text-decoration: underline;
         }
 
-        @include mq(medium){
+        @include mq(small){
             display: block;
         }
     }
@@ -32,10 +32,12 @@
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         border: 1px solid $grey;
         padding: 0.5rem;
+        padding-top: 2rem;
         margin: 1rem 0;
         cursor: pointer;
         border-radius: 10px;
         transition: 0.5s ease;
+        @include flexbox(column, nowrap, space-between);
 
         &:hover{
             transform: translateY(-15px);
@@ -44,6 +46,8 @@
 
     &--btn{
         margin-bottom: 1rem;
+        padding: 0.9rem 1.25rem;
+        align-self: center;
     }
 
     h4{
@@ -62,7 +66,10 @@
 
 //Styles for icons
 .icon{
-    padding: 1rem;
+    display: block;
+    margin: 0 auto 15px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
-    margin: 1rem;
+    line-height: 75px;
 }

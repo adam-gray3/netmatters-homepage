@@ -14,7 +14,7 @@
             //Change order of flex items to put menu in right corner
             &--btn-container{
                 order: 2;
-                margin-left: 20px;
+                margin-left: 10px;
             }       
     }
 }
@@ -53,6 +53,7 @@
     //Margin between buttons when displayed 
     button{
         margin: 0 0.5rem;
+        padding: 1.1rem 1.5rem;
     }
     //Show buttons on medium screens and push to right side
     @include mq(medium){

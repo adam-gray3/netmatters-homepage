@@ -3,6 +3,7 @@
     @include max-width();
     @include flexbox(column);
 
+
     &__advert{
         @include flexbox(null, nowrap, null);
         @include checkbox();

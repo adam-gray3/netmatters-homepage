@@ -1,12 +1,16 @@
 //Hamburger menu styles
 .hamburger-menu{
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
     background-color: $primary-color;
     position: relative;
     cursor: pointer;
-    padding: 1.5rem;
-    border-radius: 2px;
+    border-radius: 4px;
+    margin-left: 1.5rem;
+
+    @include mq(small){
+        margin-left: 0;
+    }
 
     &:hover{
         background-color: darken($primary-color, 10);
@@ -14,10 +18,9 @@
 }
 
 .ham-bar{
-    width: 70%;
-    height: 3px;
+    width: 60%;
+    height: 4px;
     background-color: $white;
-    border-radius: 25px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -26,11 +29,11 @@
 }
 
 .bar-top{
-    top: 25%;
+    top: 30%;
 }
 
 .bar-bottom{
-    top: 75%;
+    top: 70%;
 }
 
 //Show X when button is clicked, add active class using JavaScript

@@ -16,7 +16,7 @@
     <div class="wrapper"> 
     <header class="header">
         <div class="inner__header">
-            <a href="index.html"><img src="scss/utilities/images/logo.png" alt="Netmatters" class="logo"></a>
+            <a href="index.html"><img src="scss/utilities/images/new-logo.png" alt="Netmatters" class="logo"></a>
             <div class="inner__header--btn-container">
              <button class="inner__header--phone" aria-label="phone"><i class="fa fa-volume-control-phone fa-2x" aria-hidden="true"></i></button>
              <div class="hamburger-menu">
@@ -192,43 +192,55 @@
             </div>
             <div class="our-services__container">
                 <div class="our-services__container__card hover-services--bespoke">
-                    <i class="fa fa-laptop fa-2x icon-services-bespoke icon" aria-hidden="true"></i>
+                    <span class="icon-services-bespoke icon">
+                        <i class="fa fa-laptop fa-2x" aria-hidden="true"></i>
+                    </span>
                     <h4>Bespoke Software</h4>
                     <p>Bespoke software solutions for all your business needs including intergrations and reporting.</p>
                     <button class="our-services__container--btn btn-color--bespoke btn">READ MORE</button>
                 </div>
                 <div class="our-services__container__card hover-services--support">
-                    <i class="fa fa-desktop fa-2x icon-services-support icon" aria-hidden="true"></i>
+                    <span class="icon-services-support icon">
+                        <i class="fa fa-desktop fa-2x" aria-hidden="true"></i>
+                    </span>
                     <h4>IT SUPPORT</h4>
                     <p>Fully managed IT support and consultancy packages tailored to meet your exact business needs.</p>
                     <button class="our-services__container--btn btn-color--support btn">READ MORE</button>
                 </div>
                 <div class="our-services__container__card hover-services--marketing">
-                    <i class="fa fa-signal fa-2x icon-services-marketing icon" aria-hidden="true"></i>
+                    <span class="icon-services-marketing icon">
+                        <i class="fa fa-signal fa-2x" aria-hidden="true"></i>
+                    </span>
                     <h4>Digital Marketing</h4>
                     <p>Driven brand awarness & ROI through creative digital marketing campaigns.</p>
                     <button class="our-services__container--btn btn-color--marketing btn">READ MORE</button>
                 </div>
                 <div class="our-services__container__card hover-services--telecoms">
-                    <i class="fa fa-volume-control-phone fa-2x icon-services-telecoms icon" aria-hidden="true"></i>
+                    <span class="icon-services-telecoms icon">
+                        <i class="fa fa-volume-control-phone fa-2x" aria-hidden="true"></i>
+                    </span>
                     <h4>Telecoms Services</h4>
                     <p>Business telephony solutions including mobile & connectivity solutions.</p>
                     <button class="our-services__container--btn btn-color--telecoms btn">READ MORE</button>
                 </div>
                 <div class="our-services__container__card hover-services--design">
-                    <i class="fa fa-code fa-2x icon-services-design icon" aria-hidden="true"></i>
+                    <span class="icon icon-services-design"><i class="fa fa-code fa-2x" aria-hidden="true"></i></span>
                     <h4>Web Design</h4>
                     <p>User-centric design for businesses looking to make a lasting impression.</p>
                     <button class="our-services__container--btn btn-color--design btn">READ MORE</button>
                 </div>
                 <div class="our-services__container__card hover-services--cyber">
-                    <i class="fa fa-shield fa-2x icon-services-cyber icon" aria-hidden="true"></i>
+                    <span class="icon-services-cyber icon">
+                        <i class="fa fa-shield fa-2x" aria-hidden="true"></i>
+                    </span>
                     <h4>Cyber Secruity</h4>
                     <p>Prevention, testing, consultancy & breach management services.</p>
                     <button class="our-services__container--btn btn-color--cyber btn">READ MORE</button>
                 </div>
                 <div class="our-services__container__card hover-services--developer">
-                    <i class="fa fa-graduation-cap fa-2x icon-services-developer icon" aria-hidden="true"></i>
+                    <span class="icon-services-developer icon">
+                        <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
+                    </span>
                     <h4>Developer Training</h4>
                     <p>Web design & software training course desinged to secure a job in tech.</p>
                     <button class="our-services__container--btn btn-color--developer btn">READ MORE</button>
@@ -303,15 +315,15 @@
                     <p>Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are! <p><br>
                      <p class="quote"><span>Eleanor Bishop, Head of Marketing</span> - Ashcroft Partnership LLP</p>
                        <div class="btn-container">
-                            <a href="#" class="btn-container--btn btn-color--support btn">GOOGLE REVIEWS <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            <a href="#" class="btn-container--btn btn-color--marketing btn">TRUSTPILOT REVIEWS  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            <a href="#" class="btn-container--btn google-review btn">GOOGLE REVIEWS <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            <a href="#" class="btn-container--btn trustpilot-review btn">TRUSTPILOT REVIEWS  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                 </div>
             </div>
         </section>
 
         <section class="latest-news">
-            <div class="heading">
+            <div class="latest-news-heading">
                 <h3>Latest News</h3>
                 <a href="#">View All <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </div>
@@ -319,16 +331,19 @@
                 <div class="latest-news__card">
                     <a href="#" class="card-link" aria-label="case studies"></a> 
                     <div class="latest-news__card--tag btn-color--support">NEWS</div>
-                    <img src="scss/utilities/images/news-img-1.jpg" alt="">
+                    <div class="img-holder">
+                        <img src="scss/utilities/images/news-img-1.jpg" alt="" class="latest-news__card__img">
+                    </div>
+                    
                     <div class="latest-news__content">
                         <h5 class="latest-news__content--note icon-color-support">April Notables 2023 <span class="latest-news__content--time">- 4 MINUTE READ</span></h5>
-                        <p>Each month, various departments recognise those employess who have excelled in their work and helped...</p>
+                        <p class="latest-news__content--text">Each month, various departments recognise those employess who have excelled in their work and helped...</p>
                         <a class="latest-news__content--btn btn-color--support btn" href="#">READ MORE</a>
                         <hr>
                         <div class="posted">
                             <img src="scss/utilities/images/small-logo.jpg" alt="">
                             <div class="posted__by">
-                                <p>Posted by Netmatters</p>
+                                <p class="posted__by--author">Posted by Netmatters</p>
                                 <p class="posted__by--date">18th May 2023</p>
                             </div>
                         </div>
@@ -337,16 +352,18 @@
                 <div class="latest-news__card">
                     <a href="#" class="card-link" aria-label="case studies"></a>
                     <div class="latest-news__card--tag btn-color--support">CASE STUDIES</div>
-                    <img src="scss/utilities/images/news-img-2.jpg" alt="">
+                    <div class="img-holder">
+                        <img src="scss/utilities/images/news-img-2.jpg" alt="" class="latest-news__card__img">
+                    </div>
                     <div class="latest-news__content">
                         <h5 class="latest-news__content--note icon-color-support">Staying Secure & Connected With Netmatters -...<span class="latest-news__content--time">- 6 MINUTE READ</span></h5>
-                        <p>The Client Urban Mission Schools and Community (UMSC) is an independent school aiming to re-engage y...</p>
+                        <p class="latest-news__content--text">The Client Urban Mission Schools and Community (UMSC) is an independent school aiming to re-engage y...</p>
                         <a class="latest-news__content--btn btn-color--support btn" href="#">READ MORE</a>
                         <hr>
                         <div class="posted">
                             <img src="scss/utilities/images/small-logo.jpg" alt="">
                             <div class="posted__by">
-                                <p>Posted by Netmatters</p>
+                                <p class="posted__by--author">Posted by Netmatters</p>
                                 <p class="posted__by--date">11th May 2023</p>
                             </div>
                         </div>
@@ -355,16 +372,18 @@
                 <div class="latest-news__card">
                     <a href="#" class="card-link" aria-label="case studies"></a>
                     <div class="latest-news__card--tag btn-color--design">CASE STUDIES</div>
-                    <img src="scss/utilities/images/news-img-3.jpg" alt="">
+                    <div class="img-holder">
+                        <img src="scss/utilities/images/news-img-3.jpg" alt="" class="latest-news__card__img">
+                    </div>
                     <div class="latest-news__content">
                         <h5 class="latest-news__content--note icon-color-design">Glaven Valley - Web Case Study <span class="latest-news__content--time">- 5 MINUTE READ</span></h5>
-                        <p>The Client Since 2001, Glaven Valley has been a leading platform for the listing and booking of self-...</p>
+                        <p class="latest-news__content--text">The Client Since 2001, Glaven Valley has been a leading platform for the listing and booking of self-...</p>
                         <a class="latest-news__content--btn btn-color--design btn" href="#">READ MORE</a>
                         <hr>
                         <div class="posted">
                             <img src="scss/utilities/images/small-logo.jpg" alt="">
                             <div class="posted__by">
-                                <p>Posted by Netmatters</p>
+                                <p class="posted__by--author">Posted by Netmatters</p>
                                 <p class="posted__by--date">10th May 2023</p>
                             </div>
                         </div>
@@ -516,7 +535,7 @@
     <footer class="footer">
         <div class="footer__main">
             <div class="footer__info">
-                <img src="scss/utilities/images/logo-white.png" alt="Netmatters" class="footer__info--image">
+                <img src="scss/utilities/images/new-logo-white.png" alt="Netmatters" class="footer__info--image">
                 <h4 class="footer__info__title">FOLLOW US ON:</h4>
                 <div class="footer__info__socials">
                     <a href="https://www.facebook.com" target="_blank" class="footer__socials--links hover-color--fbook" aria-label="facebook"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
