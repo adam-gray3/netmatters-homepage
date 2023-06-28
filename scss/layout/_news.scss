@@ -9,9 +9,8 @@
 
 //Styles for card container
 .latest-news__cards{
-    @include flexbox(column, nowrap);
-  
-    
+    @include flexbox(column, nowrap);  
+
     //Change layout of cards on bigger screens
     @include mq(small){
         flex-direction: row;
