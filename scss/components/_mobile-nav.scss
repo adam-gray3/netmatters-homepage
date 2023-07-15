@@ -1,0 +1,64 @@
+
+.mobile-nav{
+    background-color: $primary-color;
+    width: 340px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    overflow: auto;
+    display: none;
+    transition: left 0.5s ease-in-out;
+
+    &.active{
+        display: block;
+    }
+
+    .inner__list li a{
+        display: block;
+        padding: 1rem;
+        font-size: font-size(14px);
+        background-color: rgba(0,0,0,0.2);
+
+        &::before{
+            content: ">>";
+            font-size: font-size(10px);
+            margin-right: 10px;
+        }
+    }
+}
+
+.nav__title{
+    display: block;
+    background-color: lighten($primary-color, 5);
+    padding: 1.2rem 1rem;
+    font-size: font-size(16px);
+
+    &:hover{
+        background-color: lighten($primary-color, 2);
+    }
+}
+
+body{
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+body.active{
+    position: relative;
+    left: -340px;
+    overflow: hidden;
+}
+
+
+.mobile-nav-overlay.active{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
