@@ -1,26 +1,18 @@
-
 .mobile-nav{
     background-color: $primary-color;
-    width: 340px;
-    height: 100%;
-    position: fixed;
-    right: 0;
-    top: 0;
     z-index: 10;
     overflow: auto;
-    display: none;
-    transition: left 0.5s ease-in-out;
-
-    &.active{
-        display: block;
-    }
-
+    transition: all 0.5s ease;
+    
     .inner__list li a{
         display: block;
         padding: 1rem;
         font-size: font-size(14px);
-        background-color: rgba(0,0,0,0.2);
+        background-color: $mobile-nav;
+        border: 1px solid hsla(0,0%,100%,.1);
+    }
 
+    .inner__list ul li a, .inner__list .desktop-link{
         &::before{
             content: ">>";
             font-size: font-size(10px);
@@ -29,9 +21,9 @@
     }
 }
 
-.nav__title{
+.nav__title, .mobile-link-title{
     display: block;
-    background-color: lighten($primary-color, 5);
+    background-color: $primary-color;
     padding: 1.2rem 1rem;
     font-size: font-size(16px);
 
@@ -40,18 +32,7 @@
     }
 }
 
-body{
-    left: 0;
-    transition: all 0.5s ease;
-}
-
-body.active{
-    position: relative;
-    left: -340px;
-    overflow: hidden;
-}
-
-
+//Overlay for page when nav is open
 .mobile-nav-overlay.active{
     position: absolute;
     z-index: 100;
@@ -61,4 +42,47 @@ body.active{
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.4);
+}
+
+
+//MOBILE NAV 
+.mobile-link{
+    &-list{
+        color: $white;
+        background-color: darken($primary-color, 10);
+        margin: 1rem;
+        text-align: center;
+        
+
+        @include mq(medium){
+            display: none;
+        }
+
+        li{
+            padding: 0.75rem;
+            font-size: font-size(16px);
+        }
+    }
+  
+     &-title, &-heading{
+        text-align: center;
+        padding: 1.5rem;
+        margin: 1.5rem;
+        border: 1px solid hsla(0,0%,100%,.1);
+        background-color: inherit;
+        font-size: font-size(22px);
+    }
+
+    &-heading{
+        i{
+            display: block;
+            font-size: font-size(24px);
+            margin-bottom: 0.5rem;
+        }
+
+        small{
+            display: block;
+            line-height: 1.5;
+        }
+    }
 }

@@ -1,0 +1,72 @@
+.mobile-nav{
+    width: 280px;
+    height: 100%;
+    position: fixed;
+    right: -350px;
+    top: 0;
+
+    //Change width of nav on larger screens
+    @include mq(medium){
+        width: 350px;
+        background-color: $mobile-nav;
+    }
+    //Slide nav into position when active
+    &.active{
+        right: 0;
+    }
+
+    //Change headings on different screensizes
+    .inner__list .desktop-link{
+    display: none;
+
+    @include mq(medium){
+        display: block;
+        }
+    }
+
+    .inner__list .mobile-link-heading{
+        display: block;
+        background-color: transparent;
+
+        @include mq(medium){
+            display: none;
+        }
+    }
+}
+
+
+//Slide page when nav is open
+body{
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+body.active{
+    position: relative;
+    left: -280px;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include mq(medium){
+        left: -350px;
+    }
+}
+
+//Change nav icons on different screensizes
+@include mq(medium){
+    .mobile-link{
+        display: none;
+    }
+}
+
+.desktop-link{
+    display: none;
+
+    @include mq(medium){
+        display: block;
+    }
+}
+
+.mobile-nav::-webkit-scrollbar{
+    display: none;
+}
