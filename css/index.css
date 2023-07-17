@@ -2085,4 +2085,167 @@ body.active {
   display: none;
 }
 
+.cookie-wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.cookie-popup {
+  display: none;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 1.25rem;
+  margin: 1rem;
+  border-radius: 4px;
+}
+.cookie-popup h3 {
+  font-size: 1.75rem;
+  padding-bottom: 1rem;
+  color: #666;
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: 400;
+}
+.cookie-popup p {
+  line-height: 1.8;
+  margin: 2rem 0;
+  color: #666;
+}
+
+.cookie-wrapper.active {
+  display: flex;
+}
+
+.cookie-popup.active {
+  display: block;
+}
+
+.consent-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #75788a;
+  color: #fff;
+  border: 0;
+  border-top-right-radius: 8px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1rem;
+}
+
+.settings, .accept {
+  color: #fff;
+  flex-grow: 1;
+  font-size: 1.125rem;
+  padding: 0.85rem;
+}
+
+.settings {
+  background-color: #999aa2;
+}
+.settings:hover {
+  background-color: #7e808a;
+}
+
+.accept {
+  background-color: #926fb1;
+}
+.accept:hover {
+  background-color: #79539a;
+}
+
+.change-settings-wrapper {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  color: #6a6a6a;
+  padding-bottom: 2rem;
+  z-index: 1000;
+}
+.change-settings-wrapper span {
+  font-weight: 600;
+  color: #000;
+  display: block;
+  margin: 1rem 0;
+}
+.change-settings-wrapper h4 {
+  font-size: 1.375rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #000;
+}
+.change-settings-wrapper h2 {
+  font-size: 1.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #000;
+}
+.change-settings-wrapper p {
+  font-size: 0.875rem;
+}
+.change-settings-wrapper .settings-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 1.5rem 0;
+}
+.change-settings-wrapper .site {
+  background-color: #926fb1;
+  color: #fff;
+}
+.change-settings-wrapper .cancel {
+  background-color: #999aa2;
+  color: #fff;
+}
+.change-settings-wrapper ul li {
+  list-style-type: disc;
+  margin-bottom: 0.25rem;
+  margin-left: 3rem;
+}
+.change-settings-wrapper ul:nth-of-type(2) {
+  margin-top: 2rem;
+}
+
+.change-settings-wrapper.active {
+  display: block;
+}
+
+.settings-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.btn-active {
+  background-color: #926fb1;
+  color: #fff;
+}
+
 /*# sourceMappingURL=index.css.map */
