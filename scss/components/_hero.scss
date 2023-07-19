@@ -1,11 +1,19 @@
-.hero__container{
-    background: url("../images/cyber-hero-main.jpg") no-repeat center center/cover;
+.hero-content{
     position: relative;
     width: 100%;
-    height: 550px;
+}
+
+
+.img-slide-container{
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 525px;
 
     .overlay{
-        position: absolute;
+        position: relative;
         width: 100%;
         height: 100%;
         top: 0;
@@ -16,17 +24,26 @@
     }
 }
 
-//Text and Button Styles
-.hero__content{
-    @include max-width;
+
+.slick-slide{
+    position: relative;
+}
+
+//HERO CONTENT
+.img-slide-content{
+    width: 80%;
+    position: absolute;
+    top: 15%; 
+    left: 50%;   
+    transform: translate(-50%, 0);
     @include flexbox(column, null, center, center);
     color: $white;
-    height: 100%;
     text-align: center;
     letter-spacing: $letter-spacing;
+    
 
     &--title{
-        font-size: font-size(40px);
+        font-size: font-size(36px);
         margin-bottom: 1rem;
     }
 
@@ -53,17 +70,54 @@
         }
     }
 
-    //Change font size and text position on larger screens 
-    @include mq(medium){
-        align-items: flex-start;
-        text-align: left;
+    //Hero content sizes larger screens 
+    @include mq(small){
+        width: 700px;
+        top: 25%;
+    }
 
+
+    @include mq(medium){    
+        //Move hero content left on larger screens 
+        width: 900px;
+        left: 0;
+        transform: translate(0,0);  
+        text-align: left;
+        align-items: flex-start;
+        margin-left: 10rem;
+        
         &--title{
-            font-size: font-size(62px);
+            font-size: font-size(56px);
         }
 
         &--text{
-            font-size: font-size(24px);
+            font-size: font-size(26px);
+            line-height: 2.5rem;
         }
     }
 }
+
+.slick-dots{
+    position: absolute;
+    bottom: 30px;
+}
+
+.slick-dots li{
+    margin: 0 0.5rem;
+}
+
+.slick-dots li button:before{
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.4;
+    padding: 0.1rem;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+

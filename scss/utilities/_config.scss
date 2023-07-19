@@ -80,3 +80,20 @@ $social-colors: (
 .input-effect:focus{
     box-shadow: 0 0 4px #2fbbc5;
 }
+
+//Map for hero images slider
+$img-src: (
+    img1: "../images/home-YLei.png", 
+    img2: "../images/home-O67Y.jpg",
+    img3: "../images/home-gay8.png",
+    img4: "../images/home-6yTp.png",
+    img5: "../images/home-J8Xx.png",
+    img6: "../images/home-K0pn.jpg",
+    img7: "../images/home-MSxH.png",
+);
+
+@each $img-link, $img in $img-src {
+    .img-slide-container--#{$img-link}{
+        background: url($img) center center/cover no-repeat;
+    }
+}

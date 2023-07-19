@@ -4,6 +4,10 @@
     height: 110px;
     text-align: center;
     position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
     display: none;
     //Main nav items layout
     &__list{
@@ -15,6 +19,12 @@
      @include mq(medium){
         display: block;
     }
+}
+
+.nav.down{
+    position: fixed;
+    top: 100px;
+    transition: all 0.5s ease;
 }
 
 //Dropdown nav layout

@@ -1,13 +1,15 @@
 //Set parent to relative position for popup
 .image-container__content{
     position: relative;
+    @include flexbox (row, nowrap, center, center);
     margin: 0 2rem;
-    
+
     //Styles for popup box on hover
     &--popup{
             display: none;
             position: absolute;
             bottom: 100px;
+            // height: 100px;
             left: 50%;
             background-color: $primary-color;
             color: $white;
@@ -15,8 +17,8 @@
             width: 300px;
             transform: translateX(-50%);
             z-index: 1;
-            text-align: center;
-        
+            text-align: center;  
+           
             h4{
                 margin: 1rem;
             }
@@ -31,7 +33,10 @@
 
 .slider-container img{
     //Set image size and greyscale as default
-    width: 100px;
+    width: auto;
+    max-width: 150px;
+    max-height: 75px;
+
     filter: grayscale(1);
     &:hover{
         filter: none;
@@ -42,6 +47,7 @@
 .image-container__content:hover .image-container__content--popup{
     display: block;
 }
+
 
 //Styles for shape on popup
 .shape{
@@ -66,3 +72,6 @@
     }
 }
 
+.slick-list:hover{
+    overflow: visible;
+}

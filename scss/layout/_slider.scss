@@ -2,6 +2,7 @@
 //Layout for slider container
 .slider-container{
     @include flexbox(column, nowrap, null, center);
+    margin-top: 2rem;
 }
 
 //Image styles
