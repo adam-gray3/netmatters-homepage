@@ -2,12 +2,14 @@
 //Layout for slider container
 .slider-container{
     @include flexbox(column, nowrap, null, center);
-    margin-top: 2rem;
+    margin: 2rem 0;
+    position: relative;
 }
 
 //Image styles
 .image-container{
     width: 100%;
-    @include flexbox(row, null, space-around, center);
+    @include flexbox(row, null, null, center);
     padding: 1rem 0;
 }
+

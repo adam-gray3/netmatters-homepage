@@ -2,14 +2,14 @@
 .image-container__content{
     position: relative;
     @include flexbox (row, nowrap, center, center);
-    margin: 0 2rem;
-
+    //OVERRIDE SLICK DEFAULT INLINE BLOCK
+    display: flex !important;
+    
     //Styles for popup box on hover
     &--popup{
             display: none;
             position: absolute;
-            bottom: 100px;
-            // height: 100px;
+            bottom: 200%;
             left: 50%;
             background-color: $primary-color;
             color: $white;
@@ -34,7 +34,7 @@
 .slider-container img{
     //Set image size and greyscale as default
     width: auto;
-    max-width: 150px;
+    max-width: 175px;
     max-height: 75px;
 
     filter: grayscale(1);
@@ -48,6 +48,10 @@
     display: block;
 }
 
+//Allows popup to be seen on hover
+.client-slide .slick-list:hover{
+    overflow: visible;
+}
 
 //Styles for shape on popup
 .shape{
@@ -72,6 +76,3 @@
     }
 }
 
-.slick-list:hover{
-    overflow: visible;
-}

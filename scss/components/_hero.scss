@@ -20,7 +20,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0,0,0,0.4);
+        background: linear-gradient(to right, rgba(0,0,0,0.9) , rgba(0,0,0,0));
     }
 }
 
@@ -40,6 +40,7 @@
     color: $white;
     text-align: center;
     letter-spacing: $letter-spacing;
+    display: none;
     
 
     &--title{
@@ -95,6 +96,11 @@
             line-height: 2.5rem;
         }
     }
+}
+
+//PREVENTS CONTENT FLASH ON LOAD
+.slick-initialized .img-slide-content{
+    display: flex;
 }
 
 .slick-dots{
